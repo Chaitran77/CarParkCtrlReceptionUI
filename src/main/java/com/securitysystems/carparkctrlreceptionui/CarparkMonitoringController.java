@@ -3,7 +3,7 @@ package com.securitysystems.carparkctrlreceptionui;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class CarparkMonitoringController {
     @FXML
     private Label welcomeText;
 
