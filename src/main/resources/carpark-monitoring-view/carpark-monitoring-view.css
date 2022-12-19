@@ -23,16 +23,17 @@
    -fx-background-color: -bg-color;
 }
 
-.button-bar {
-   -fx-padding: 15px 0px;
+.window-control-buttons-container {
+   -fx-padding: 15px 20px;
    -fx-background-color: -bg-color;
 }
 
 .window-control-button {
     -fx-background-color: transparent;
     -fx-background-position: center center;
-    -fx-background-size: 30 30;
+    -fx-background-size: 20 20;
     -fx-background-repeat: stretch;
+    -fx-padding: 15 30;
 }
 
 .minimise-button {
