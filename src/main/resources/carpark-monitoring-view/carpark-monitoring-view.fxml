@@ -27,7 +27,7 @@
             </font>
          </Label>
          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-         <Button ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="minimiseButton" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -39,7 +39,7 @@
                <Insets />
             </HBox.margin>
          </Button>
-         <Button contentDisplay="CENTER" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="maximiseButton" contentDisplay="CENTER" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -51,7 +51,7 @@
                <Insets />
             </HBox.margin>
          </Button>
-         <Button ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="exitButton" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
