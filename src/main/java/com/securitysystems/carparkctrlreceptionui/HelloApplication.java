@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -24,6 +25,8 @@ public class HelloApplication extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/carpark-monitoring-view/carpark-monitoring-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1080, 720);
+
+        // allow the window to be dragged by the titlebar
         Node titlebar = scene.lookup("#titlebar");
         titlebar.setOnMousePressed(event -> {
             xOffset = event.getSceneX();
@@ -36,7 +39,18 @@ public class HelloApplication extends Application {
             stage.setY(event.getScreenY() - yOffset);
             event.consume();
         });
-        stage.setTitle("Hello!");
+
+        // give custom window controls normal functionality
+        Button minimiseButton = (Button) scene.lookup("#minimiseButton");
+        minimiseButton.setOnAction(event -> stage.setIconified(true));
+
+        Button maximiseButton = (Button) scene.lookup("#maximiseButton");
+        maximiseButton.setOnAction(event -> stage.setMaximized(!stage.isMaximized())); // set to opposite of isMaximised() - avoids use of if statement which would need isMaximised() anyway
+
+        Button exitButton = (Button) scene.lookup("#exitButton");
+        exitButton.setOnAction(event -> stage.close());
+
+        stage.setTitle("Carpark Monitoring and Control Client");
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();

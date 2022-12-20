@@ -21,13 +21,13 @@
 <BorderPane styleClass="background-pane" stylesheets="@../carpark-monitoring-view/carpark-monitoring-view.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securitysystems.carparkctrlreceptionui.CarparkMonitoringController">
    <top>
       <HBox id="titlebar" maxHeight="50.0" prefHeight="50.0" spacing="30.0" styleClass="window-control-buttons-container" BorderPane.alignment="TOP_RIGHT">
-         <Label styleClass="title-label" text="Carpark Monitoring App" textFill="#f5f2f2">
+         <Label styleClass="title-label" text="Carpark Monitoring Client" textFill="#f5f2f2">
             <font>
                <Font name="Ubuntu" size="20.0" />
             </font>
          </Label>
          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-         <Button ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="minimiseButton" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -39,7 +39,7 @@
                <Insets />
             </HBox.margin>
          </Button>
-         <Button contentDisplay="CENTER" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="maximiseButton" contentDisplay="CENTER" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -51,7 +51,7 @@
                <Insets />
             </HBox.margin>
          </Button>
-         <Button ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="exitButton" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>

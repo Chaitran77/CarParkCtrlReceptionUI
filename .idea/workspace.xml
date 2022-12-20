@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Wrapped window control buttons in HBox instead of buttonbar for extensibility and more styling control.">
+    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Gave window controls functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" afterDir="false" />
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671444961167</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Developed &quot;monitoring&quot; tab by adding the following:&#10;GridPane with sections for:&#10;ScrollPane for event list&#10;Labels for most recent or &quot;last&quot; numberplate&#10;Open and close gate buttons&#10;&#10;Added source in HelloApplication.java">
+      <created>1671565793631</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671565793631</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +157,8 @@
     <MESSAGE value="Added link" />
     <MESSAGE value="Created monitoring view and made window movable. Window controls don't yet work." />
     <MESSAGE value="Wrapped window control buttons in HBox instead of buttonbar for extensibility and more styling control." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrapped window control buttons in HBox instead of buttonbar for extensibility and more styling control." />
+    <MESSAGE value="Developed &quot;monitoring&quot; tab by adding the following:&#10;GridPane with sections for:&#10;ScrollPane for event list&#10;Labels for most recent or &quot;last&quot; numberplate&#10;Open and close gate buttons&#10;&#10;Added source in HelloApplication.java" />
+    <MESSAGE value="Gave window controls functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gave window controls functionality" />
   </component>
 </project>
