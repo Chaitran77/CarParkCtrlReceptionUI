@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Gave window controls functionality">
+    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Changed alignment of &quot;Open Gate&quot; button text to CENTER">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +23,25 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CarParkCtrlReceptionUI" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CarParkCtrlReceptionUI" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CarParkCtrlReceptionUI" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -60,12 +74,16 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/kiran/IdeaProjects/CarParkCtrlReceptionUI/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43831417&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.29992464&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
 }</component>
@@ -85,6 +103,7 @@
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.securitysystems.carparkctrlreceptionui.HelloApplication" />
       <module name="CarParkCtrlReceptionUI.main" />
+      <option name="PROGRAM_PARAMETERS" value="$ModuleSourcePath$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.securitysystems.carparkctrlreceptionui.*" />
@@ -138,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671565793631</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Gave window controls functionality&#10;Changed use of &quot;application&quot; and &quot;app&quot; to &quot;client&quot;">
+      <created>1671567450484</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671567450484</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Gave window controls functionality&#10;Changed use of &quot;application&quot; and &quot;app&quot; to &quot;client&quot;">
+      <created>1671567487829</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671567487829</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +192,8 @@
     <MESSAGE value="Wrapped window control buttons in HBox instead of buttonbar for extensibility and more styling control." />
     <MESSAGE value="Developed &quot;monitoring&quot; tab by adding the following:&#10;GridPane with sections for:&#10;ScrollPane for event list&#10;Labels for most recent or &quot;last&quot; numberplate&#10;Open and close gate buttons&#10;&#10;Added source in HelloApplication.java" />
     <MESSAGE value="Gave window controls functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gave window controls functionality" />
+    <MESSAGE value="Gave window controls functionality&#10;Changed use of &quot;application&quot; and &quot;app&quot; to &quot;client&quot;" />
+    <MESSAGE value="Changed alignment of &quot;Open Gate&quot; button text to CENTER" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed alignment of &quot;Open Gate&quot; button text to CENTER" />
   </component>
 </project>
