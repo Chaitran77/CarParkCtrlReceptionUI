@@ -48,9 +48,7 @@
 	-fx-background-image: url("images/close-icon.png");
 }
 
-.events-scroll-box  {
-	-fx-background-color: -bg-color;
-}
+
 
 .tab-pane .tab-header-area .tab-header-background {
 	-fx-opacity: 0;
@@ -90,4 +88,34 @@
 	-fx-background-insets: 0, 0 0 1 0;
  /* -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; /* 5 2 0 10 */
 	-fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
+}
+
+/* in-tab styling follows */
+
+#video-view-anchor {
+    -fx-background-color: bg-color;
+    -fx-border-color: -blue-bg-color;
+    -fx-border-width: 3px 0 0 0;
+}
+
+.main-button-style-set {
+    -fx-background-insets: 0 0 0 0;
+    -fx-text-fill: #FFF;
+    -fx-border-width: 3px;
+}
+
+#open-gate-button {
+    -fx-border-color: green;
+    -fx-background-color: #0A0;
+}
+
+#close-gate-button {
+    -fx-border-color: red;
+    -fx-background-color: #A00;
+}
+
+#events-scroll-box  {
+	-fx-background-color: -bg-color;
+	-fx-border-color: -blue-bg-color;
+	-fx-border-width: 0 0 0 3px;
 }
