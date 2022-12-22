@@ -1,15 +1,15 @@
 .root{
-    -bg-gradient: linear-gradient(from 25px 25px to 500px 300px, #a1ffce, #faffd1);
-    -hlight-gradient: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+	-bg-gradient: linear-gradient(from 25px 25px to 500px 300px, #a1ffce, #faffd1);
+	-hlight-gradient: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
 
-    -primary: #81c48355;
-    -secondary: #375FCB;
-    -tertiary: #fcc200;
-    -tertiary-armed: #FDDD71;
+	-primary: #81c48355;
+	-secondary: #375FCB;
+	-tertiary: #fcc200;
+	-tertiary-armed: #FDDD71;
 
-    -bg-color: #222;
-    -blue-bg-color: #679df6;
-    -darker-blue-bg-color: #41649e;
+	-bg-color: #222;
+	-blue-bg-color: #679df6;
+	-darker-blue-bg-color: #41649e;
 }
 
 
@@ -29,65 +29,65 @@
 }
 
 .window-control-button {
-    -fx-background-color: transparent;
-    -fx-background-position: center center;
-    -fx-background-size: 20 20;
-    -fx-background-repeat: stretch;
-    -fx-padding: 15 30;
+	-fx-background-color: transparent;
+	-fx-background-position: center center;
+	-fx-background-size: 20 20;
+	-fx-background-repeat: stretch;
+	-fx-padding: 15 30;
 }
 
 .minimise-button {
-    -fx-background-image: url("images/minimize-icon.png");
+	-fx-background-image: url("images/minimize-icon.png");
 }
 
 .maximise-button {
-    -fx-background-image: url("images/maximize-icon.png");
+	-fx-background-image: url("images/maximize-icon.png");
 }
 
 .close-button {
-    -fx-background-image: url("images/close-icon.png");
+	-fx-background-image: url("images/close-icon.png");
 }
 
 .events-scroll-box  {
-    -fx-background-color: -bg-color;
+	-fx-background-color: -bg-color;
 }
 
 .tab-pane .tab-header-area .tab-header-background {
-    -fx-opacity: 0;
+	-fx-opacity: 0;
 }
 
 .tab-pane
 {
-    -fx-tab-min-width:150px;
-    -fx-tab-min-height:50px;
-    -fx-background-color: -bg-color;
+	-fx-tab-min-width:150px;
+	-fx-tab-min-height:50px;
+	-fx-background-color: -bg-color;
 }
 
 .tab{
-    -fx-background-insets: 0 1 0 1,0,0;
+	-fx-background-insets: 0 1 0 1,0,0;
 }
 .tab-pane .tab:selected
 {
-    -fx-background-color: -darker-blue-bg-color;
+	-fx-background-color: -darker-blue-bg-color;
 }
 
 .tab-pane .tab, .tab-pane:top .tab-header-area
 {
-    -fx-background-color: -blue-bg-color;
+	-fx-background-color: -blue-bg-color;
 }
 
 .tab .tab-label {
-    -fx-alignment: CENTER;
-    -fx-text-fill: #FFF;
-    -fx-font-size: 15px;
+	-fx-alignment: CENTER;
+	-fx-text-fill: #FFF;
+	-fx-font-size: 15px;
 }
 
 .tab:selected .tab-label {
-    -fx-alignment: CENTER;
+	-fx-alignment: CENTER;
 }
 
 .tab-pane:top *.tab-header-area {
-    -fx-background-insets: 0, 0 0 1 0;
+	-fx-background-insets: 0, 0 0 1 0;
  /* -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; /* 5 2 0 10 */
-    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
+	-fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
 }

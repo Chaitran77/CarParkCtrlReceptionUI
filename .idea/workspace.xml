@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Changed alignment of &quot;Open Gate&quot; button text to CENTER">
+    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671567487829</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs">
+      <created>1671658263851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671658263851</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +201,7 @@
     <MESSAGE value="Gave window controls functionality" />
     <MESSAGE value="Gave window controls functionality&#10;Changed use of &quot;application&quot; and &quot;app&quot; to &quot;client&quot;" />
     <MESSAGE value="Changed alignment of &quot;Open Gate&quot; button text to CENTER" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed alignment of &quot;Open Gate&quot; button text to CENTER" />
+    <MESSAGE value="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs" />
   </component>
 </project>
