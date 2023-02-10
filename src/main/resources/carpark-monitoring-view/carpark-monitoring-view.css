@@ -98,10 +98,18 @@
     -fx-border-width: 3px 0 0 0;
 }
 
+.button-style-set:pressed {
+	-fx-opacity: 50%;
+}
+
+.button-style-set:hover {
+	-fx-background-color: gray;
+}
+
 .main-button-style-set {
-    -fx-background-insets: 0 0 0 0;
-    -fx-text-fill: #FFF;
-    -fx-border-width: 3px;
+	-fx-background-insets: 0 0 0 0;
+	-fx-text-fill: #FFF;
+	-fx-border-width: 3px;
 }
 
 #open-gate-button {
