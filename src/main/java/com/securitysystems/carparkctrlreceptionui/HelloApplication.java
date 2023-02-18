@@ -5,10 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Objects;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 public class HelloApplication extends Application {
 
@@ -49,6 +57,21 @@ public class HelloApplication extends Application {
 
 		Button exitButton = (Button) scene.lookup("#exitButton");
 		exitButton.setOnAction(event -> stage.close());
+
+
+		ImageView snapshot_view = (ImageView)scene.lookup("#snapshot-view");
+		AnchorPane snapshot_view_anchor = (AnchorPane)scene.lookup("#snapshot-view-anchor");
+		Image snapshot = new Image(Objects.requireNonNull(getClass().getResource("/carpark-monitoring-view/images/maximize-icon.png")).openStream());
+
+		snapshot_view.setImage(snapshot);
+		snapshot_view.setPreserveRatio(true);
+		snapshot_view.setSmooth(true);
+		snapshot_view.fitWidthProperty().bind(snapshot_view_anchor.widthProperty());
+		snapshot_view.fitHeightProperty().bind(snapshot_view_anchor.heightProperty());
+
+		Timer logRetreiveTimer = new Timer();
+		logRetreiveTimer.schedule(new loadLatestLogsTask(), TimeUnit.SECONDS.toMillis(10));
+
 
 		stage.setTitle("Carpark Monitoring and Control Client");
 		stage.initStyle(StageStyle.UNDECORATED);

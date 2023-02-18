@@ -92,8 +92,8 @@
 
 /* in-tab styling follows */
 
-#video-view-anchor {
-    -fx-background-color: bg-color;
+#snapshot-view-anchor {
+    -fx-background-color: -bg-color;
     -fx-border-color: -blue-bg-color;
     -fx-border-width: 3px 0 0 0;
 }
