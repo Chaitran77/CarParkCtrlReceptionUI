@@ -8,8 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -28,10 +29,13 @@ public class HelloApplication extends Application {
 
 	private double xOffset;
 	private double yOffset;
+
+	private Timer logRetreiveTimer;
 	@Override
 	public void start(Stage stage) throws IOException {
 
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/carpark-monitoring-view/carpark-monitoring-view.fxml"));
+
 		Scene scene = new Scene(fxmlLoader.load(), 1080, 720);
 
 		// allow the window to be dragged by the titlebar
@@ -39,7 +43,7 @@ public class HelloApplication extends Application {
 		titlebar.setOnMousePressed(event -> {
 			xOffset = event.getSceneX();
 			yOffset = event.getSceneY();
-			event.consume(); // prevent the event from being interpreted by anything elsee
+			event.consume(); // prevent the event from being interpreted by anything else
 		});
 
 		titlebar.setOnMouseDragged(event -> {
@@ -59,27 +63,37 @@ public class HelloApplication extends Application {
 		exitButton.setOnAction(event -> stage.close());
 
 
-		ImageView snapshot_view = (ImageView)scene.lookup("#snapshot-view");
-		AnchorPane snapshot_view_anchor = (AnchorPane)scene.lookup("#snapshot-view-anchor");
+		ImageView entrySnapshotView = (ImageView)scene.lookup("#entry-snapshot-view");
+//		Pane entrySnapshotViewAnchor = (Pane) scene.lookup("#snapshot-view-anchor");
 		Image snapshot = new Image(Objects.requireNonNull(getClass().getResource("/carpark-monitoring-view/images/maximize-icon.png")).openStream());
 
-		snapshot_view.setImage(snapshot);
-		snapshot_view.setPreserveRatio(true);
-		snapshot_view.setSmooth(true);
-		snapshot_view.fitWidthProperty().bind(snapshot_view_anchor.widthProperty());
-		snapshot_view.fitHeightProperty().bind(snapshot_view_anchor.heightProperty());
+//		entrySnapshotView.setFitWidth(entrySnapshotViewAnchor.getWidth());
+//		entrySnapshotView.setFitHeight(entrySnapshotViewAnchor.getHeight());
 
-		Timer logRetreiveTimer = new Timer();
-		logRetreiveTimer.schedule(new loadLatestLogsTask(), TimeUnit.SECONDS.toMillis(10));
+//		stage.widthProperty().addListener((obs, oldVal, newVal) -> {
+//			entrySnapshotView.setFitWidth(entrySnapshotViewAnchor.getWidth());
+//			entrySnapshotView.setFitHeight(entrySnapshotViewAnchor.getHeight());
+//		});
 
+
+//		entrySnapshotViewAnchor.setMaxHeight(entrySnapshotViewAnchor.getHeight());
 
 		stage.setTitle("Carpark Monitoring and Control Client");
 		stage.initStyle(StageStyle.UNDECORATED);
 		stage.setScene(scene);
 		stage.show();
+
+		VBox eventsContainer = (VBox) scene.lookup("#events-container");
+		logRetreiveTimer = new Timer();
+		logRetreiveTimer.schedule(new loadLatestLogsTask(eventsContainer, entrySnapshotView), 30, TimeUnit.SECONDS.toMillis(10));
 	}
 
 	public static void main(String[] args) {
 		launch();
+	}
+
+	@Override
+	public void stop() {
+		logRetreiveTimer.cancel();
 	}
 }

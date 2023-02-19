@@ -1,15 +1,12 @@
 .root{
-	-bg-gradient: linear-gradient(from 25px 25px to 500px 300px, #a1ffce, #faffd1);
-	-hlight-gradient: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
-
-	-primary: #81c48355;
-	-secondary: #375FCB;
-	-tertiary: #fcc200;
-	-tertiary-armed: #FDDD71;
-
 	-bg-color: #222;
 	-blue-bg-color: #679df6;
 	-darker-blue-bg-color: #41649e;
+
+	-event-unknown-vehicle-color: #3159c8;
+	-event-acknowledged-color: #3159c8;
+	-event-unacknowledged-color: #3159c8;
+
 }
 
 
@@ -47,8 +44,6 @@
 .close-button {
 	-fx-background-image: url("images/close-icon.png");
 }
-
-
 
 .tab-pane .tab-header-area .tab-header-background {
 	-fx-opacity: 0;
@@ -91,6 +86,11 @@
 }
 
 /* in-tab styling follows */
+
+#event-element-grid{
+    -fx-border-color: black;
+    -fx-border-width: 3px 0 0 0;
+}
 
 #snapshot-view-anchor {
     -fx-background-color: -bg-color;

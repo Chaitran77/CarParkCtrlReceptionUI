@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HttpRequester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/loadLatestLogsTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Added request methods">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HttpRequester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HttpRequester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/loadLatestLogsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/loadLatestLogsTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" afterDir="false" />
     </list>
@@ -90,7 +86,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.29992464",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -201,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671743299164</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added request methods">
+      <created>1676749427266</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676749427266</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +231,7 @@
     <MESSAGE value="Gave window controls functionality&#10;Changed use of &quot;application&quot; and &quot;app&quot; to &quot;client&quot;" />
     <MESSAGE value="Changed alignment of &quot;Open Gate&quot; button text to CENTER" />
     <MESSAGE value="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed alignment of &quot;Open Gate&quot; button text to CENTER&#10;Changed indentation to tabs" />
+    <MESSAGE value="Added request methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added request methods" />
   </component>
 </project>
