@@ -72,37 +72,38 @@
                      <RowConstraints minHeight="-Infinity" vgrow="ALWAYS" />
                      <RowConstraints minHeight="10.0" percentHeight="10" vgrow="NEVER" />
                   </rowConstraints>
-                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: -bg-color;" styleClass="top-split-pane" GridPane.columnSpan="2">
+                  <SplitPane id="top-split-pane" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" GridPane.columnSpan="2">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <VBox prefWidth="349.0">
-                                 <Label text="Last Numberplate" textFill="WHITE">
-                                    <VBox.margin>
-                                       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                    </VBox.margin>
-                                    <font>
-                                       <Font name="System Bold" size="23.0" />
-                                    </font>
-                                 </Label>
-                                 <HBox>
-                                    <Label prefWidth="93.0" text="TN57 DRT" textFill="WHITE">
-                                       <HBox.margin>
-                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                       </HBox.margin>
+                              <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="3 minutes ago" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="Last Numberplate" textFill="WHITE" GridPane.columnSpan="2">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
                                     </Label>
-                                    <Label text="3 minutes ago" textFill="WHITE">
-                                       <HBox.margin>
-                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                 </HBox>
-                              </VBox>
+                                    <Label prefWidth="93.0" text="TN57 DRT" textFill="WHITE" GridPane.rowIndex="1" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </GridPane>
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
-                              <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                              <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -113,6 +114,10 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
+                                    <Label text="Total Spaces" textFill="WHITE" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font></Label>
                                     <Label text="Remaining Spaces" textFill="WHITE">
                                        <font>
                                           <Font size="23.0" />
@@ -133,15 +138,29 @@
                                           <Font size="23.0" />
                                        </font>
                                     </Label>
+                                    <Label id="total-spaces-label" layoutX="226.0" layoutY="87.0" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
                                  </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
                               </GridPane>
                            </children></AnchorPane>
                     </items>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                   </SplitPane>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" minWidth="-Infinity" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" minWidth="-Infinity" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
                      <AnchorPane id="events-scroll-box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                         <VBox id="events-container" layoutX="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS" />
                      </AnchorPane>
+                     <GridPane.margin>
+                        <Insets left="3.0" />
+                     </GridPane.margin>
                   </ScrollPane>
                   <GridPane GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                      <columnConstraints>
@@ -151,7 +170,7 @@
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
-                     <Button id="open-gate-button" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-border-width: 3px;" text="Open Gate" textOverrun="CLIP">
+                     <Button id="open-gate-button" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Open Gate" textOverrun="CLIP">
                         <padding>
                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                         </padding>
@@ -170,7 +189,7 @@
                         </styleClass>
                      </Button>
                   </GridPane>
-                  <ImageView id="exit-snapshot-view" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
+                  <ImageView id="exit-snapshot-view" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" styleClass="snapshot-view" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
                   <ImageView id="entry-snapshot-view" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER" />
                </GridPane>
             </Tab>

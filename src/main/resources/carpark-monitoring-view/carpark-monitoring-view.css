@@ -15,6 +15,9 @@
    -fx-background-radius: 10px;
 }
 
+.snapshot-view{
+
+}
 
 .wrapper-pane{
    -fx-background-color: -bg-color;
@@ -88,15 +91,17 @@
 /* in-tab styling follows */
 
 #event-element-grid{
+    -fx-background-color: -event-acknowledged-color;
     -fx-border-color: black;
     -fx-border-width: 3px 0 0 0;
 }
 
-#snapshot-view-anchor {
-    -fx-background-color: -bg-color;
+#top-split-pane{
+    -fx-background-color:-bg-color;
     -fx-border-color: -blue-bg-color;
-    -fx-border-width: 3px 0 0 0;
+    -fx-border-width: 0 0 3px 0;
 }
+
 
 .button-style-set:pressed {
 	-fx-opacity: 50%;
@@ -115,6 +120,7 @@
 #open-gate-button {
     -fx-border-color: green;
     -fx-background-color: #0A0;
+    -fx-border-width: 3px;
 }
 
 #close-gate-button {
@@ -126,4 +132,5 @@
 	-fx-background-color: -bg-color;
 	-fx-border-color: -blue-bg-color;
 	-fx-border-width: 0 0 0 3px;
+	-fx-focus-color: transparent;
 }
