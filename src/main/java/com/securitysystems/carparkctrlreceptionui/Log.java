@@ -3,9 +3,11 @@ package com.securitysystems.carparkctrlreceptionui;
 import java.util.Date;
 
 public class Log {
-    public int EventID;
-    public int CameraID;
-    public int VehicleID;
+    // using the Integer class rather than int data type (for numerical attrs.) to permit possible null values received: https://stackoverflow.com/a/2254463/7169383
+
+    public Integer EventID;
+    public Integer CameraID;
+    public Integer VehicleID;
     public String Numberplate;
     public Date EntryTimestamp;
     public Date ExitTimestamp;
@@ -17,7 +19,7 @@ public class Log {
     // https://stackoverflow.com/a/42884828 to store dates/times
     // client.query will return a timestamp String in the promise result rows
 
-    Log(int EventID, int CameraID, int VehicleID, String Numberplate, Date EntryTimestamp, Date ExitTimestamp, String EntryImageBase64, String ExitImageBase64, boolean Acknowledged, boolean KnownVehicle) {
+    Log(Integer EventID, Integer CameraID, Integer VehicleID, String Numberplate, Date EntryTimestamp, Date ExitTimestamp, String EntryImageBase64, String ExitImageBase64, boolean Acknowledged, boolean KnownVehicle) {
         this.EventID = EventID;
         this.CameraID = CameraID;
         this.VehicleID = VehicleID;

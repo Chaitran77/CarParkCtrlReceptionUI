@@ -1,3 +1,5 @@
+/* Used the JavaFX CSS Reference Guide to design the UI and its CSS: https://openjfx.io/javadoc/11/javafx.graphics/javafx/scene/doc-files/cssref.html */
+
 .root{
 	-bg-color: #222;
 	-blue-bg-color: #679df6;
@@ -89,11 +91,11 @@
 }
 
 /* in-tab styling follows */
-
+/* monitoring tab */
 #event-element-grid{
     -fx-background-color: -event-acknowledged-color;
-    -fx-border-color: black;
-    -fx-border-width: 3px 0 0 0;
+    -fx-border-color: -bg-color;
+    -fx-border-width: 0 0 5px 0;
 }
 
 #top-split-pane{
@@ -102,6 +104,32 @@
     -fx-border-width: 0 0 3px 0;
 }
 
+#open-gate-button {
+    -fx-border-color: #f28c35;
+    -fx-background-color: #0A0;
+    -fx-border-width: 3px;
+}
+
+#events-scroll-box  {
+	-fx-background-color: -bg-color;
+	-fx-border-color: -blue-bg-color;
+	-fx-border-width: 0 0 0 3px;
+	-fx-focus-color: transparent;
+}
+
+/* search tab */
+#search-checkbox {
+}
+
+.search-property-label {
+}
+
+
+/* across tabs */
+
+.white-bg {
+    -fx-background-color: #FFF;
+}
 
 .button-style-set:pressed {
 	-fx-opacity: 50%;
@@ -115,22 +143,4 @@
 	-fx-background-insets: 0 0 0 0;
 	-fx-text-fill: #FFF;
 	-fx-border-width: 3px;
-}
-
-#open-gate-button {
-    -fx-border-color: green;
-    -fx-background-color: #0A0;
-    -fx-border-width: 3px;
-}
-
-#close-gate-button {
-    -fx-border-color: red;
-    -fx-background-color: #A00;
-}
-
-#events-scroll-box  {
-	-fx-background-color: -bg-color;
-	-fx-border-color: -blue-bg-color;
-	-fx-border-width: 0 0 0 3px;
-	-fx-focus-color: transparent;
 }

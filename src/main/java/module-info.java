@@ -4,6 +4,7 @@ module com.securitysystems.carparkctrlreceptionui {
     requires javafx.web;
     requires com.goxr3plus.fxborderlessscene;
     requires com.google.gson;
+    requires com.google.common;
 
 //    requires org.controlsfx.controls;
 //    requires org.kordamp.bootstrapfx.core;

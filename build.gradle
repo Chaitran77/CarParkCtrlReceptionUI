@@ -22,6 +22,8 @@ ext {
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
+java.modularity.inferModulePath = true
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
@@ -45,6 +47,7 @@ dependencies {
 
     implementation 'uk.co.bithatch:FX-BorderlessScene:5.0.4'
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation("com.google.guava:guava:31.1-jre")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
