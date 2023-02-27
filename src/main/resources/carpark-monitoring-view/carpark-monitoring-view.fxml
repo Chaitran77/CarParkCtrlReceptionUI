@@ -209,8 +209,8 @@
                        <rowConstraints>
                            <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                          <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                         <RowConstraints minHeight="10.0" percentHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                         <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
                        </rowConstraints>
                            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER" GridPane.columnIndex="2" GridPane.rowSpan="4">
                                <AnchorPane id="search-events-scroll-box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
@@ -228,17 +228,9 @@
                               </padding>
                            </Label>
                            <HBox fillHeight="false" prefWidth="631.0" spacing="40.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
-                                 <TextField id="search-term-field" promptText="Enter search term" />
+                                 <TextField id="search-term-field" promptText="Enter numberplate" />
                                  <CheckBox id="search-checkbox" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="Yes or no?" textFill="WHITE" visible="false" />
-                                 <SplitMenuButton id="search-by-dropdown" mnemonicParsing="false" styleClass="white-bg" text="Search by">
-                                   <items>
-                                     <MenuItem mnemonicParsing="false" text="Event ID" />
-                                     <MenuItem mnemonicParsing="false" text="Numberplate" />
-                                       <MenuItem mnemonicParsing="false" text="Entry time" />
-                                       <MenuItem mnemonicParsing="false" text="Exit time" />
-                                   </items>
-                                 </SplitMenuButton>
-                                 <Button id="search-button" mnemonicParsing="false" styleClass="white-bg" text="Search" textAlignment="CENTER" />
+                                 <Button id="search-button" mnemonicParsing="false" onAction="#handleSearchButtonClick" styleClass="white-bg" text="Search" textAlignment="CENTER" />
                               <padding>
                                  <Insets left="20.0" top="25.0" />
                               </padding>
@@ -276,7 +268,39 @@
                            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                               <padding>
                                  <Insets top="20.0" />
-                              </padding></VBox>
+                              </padding>
+                        <children>
+                           <Label textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                           <Label textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                           <Label textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                           <Label textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                           <Label textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                           <Label textFill="WHITE">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                        </children></VBox>
                            <ImageView pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                            <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                      </GridPane></AnchorPane>

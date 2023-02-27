@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Created EventElement.selectInScrollpane and other minor changes.">
+    <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Started implementing search functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/SearchUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/SearchUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677481602120</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Created EventElement.selectInScrollpane and other minor changes.">
+      <created>1677535587891</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677535587891</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +269,8 @@
     <MESSAGE value="Major Changes.&#10;Implemented: Login system (attempts counter, retrieve and hashes salt value), removed close gate button (unnecessary), events display in correct order, clicking an event displays its information in the UI (snapshot images change), added search tab (no functionality), made snapshot images fit properly, modularised and grouped label setting calls in a more memory-efficient way, changed attribute types in Log and Carpark classes to allow for nulls (which are processed). Implemented more of HttpRequester." />
     <MESSAGE value="Added focussing template" />
     <MESSAGE value="Created EventElement.selectInScrollpane and other minor changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created EventElement.selectInScrollpane and other minor changes." />
+    <MESSAGE value="Started implementing search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started implementing search functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
