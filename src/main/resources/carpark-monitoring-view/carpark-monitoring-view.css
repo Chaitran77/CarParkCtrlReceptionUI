@@ -11,7 +11,6 @@
 
 }
 
-
 .background-pane {
    -fx-background-color: transparent;
    -fx-background-radius: 10px;
@@ -117,6 +116,14 @@
 	-fx-focus-color: transparent;
 }
 
+/* so the user knows what's focused */
+
+#event-element:focused, #open-gate-button:focused {
+    -fx-border-color: white !important;
+    -fx-border-width: 3px !important;
+}
+
+
 /* search tab */
 #search-checkbox {
 }
@@ -144,3 +151,11 @@
 	-fx-text-fill: #FFF;
 	-fx-border-width: 3px;
 }
+
+
+/*
+*:focused{
+    -fx-border-color: white !important;
+    -fx-border-width: 3px !important;
+}
+*/

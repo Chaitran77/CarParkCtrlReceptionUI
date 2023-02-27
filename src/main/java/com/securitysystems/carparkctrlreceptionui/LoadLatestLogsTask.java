@@ -45,10 +45,11 @@ public class LoadLatestLogsTask extends TimerTask {
 		AnchorPane newEventElement = eventElementLoader.load();
 
 		newEventElement.focusedProperty().addListener((observableValue, prevState, newState) -> {
-//			TODO
+//			TODO: DOCUMENT THIS
 			if (newState) {
 				System.out.println("Focussed");
 				// handle click
+				EventElement.selectInScrollpane(newEventElement, applicationScene);
 			} else {
 				System.out.println("Unfocussed");
 			}

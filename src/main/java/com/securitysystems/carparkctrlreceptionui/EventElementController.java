@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class EventElementController {
 
@@ -25,13 +26,6 @@ public class EventElementController {
 			eventElement = eventElement.getParent();
 		}
 
-		Log log = (Log) eventElement.getUserData();
-
-		System.out.println(log);
-		LabelSetters.resetEventElements(monitoringScene);
-		eventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -blue-bg-color;");
-
-		LabelSetters.setCurrentLogSectionLabels(log, monitoringScene, true);
-		LabelSetters.setSnapshotImages(log, monitoringScene);
+		EventElement.selectInScrollpane((AnchorPane) eventElement, monitoringScene);
 	}
 }

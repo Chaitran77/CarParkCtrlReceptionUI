@@ -16,7 +16,7 @@
             </font>
          </Label>
          <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-         <Button id="minimiseButton" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="minimiseButton" ellipsisString="" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -29,7 +29,7 @@
                <Insets />
             </HBox.margin>
          </Button>
-         <Button id="maximiseButton" contentDisplay="CENTER" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="maximiseButton" contentDisplay="CENTER" ellipsisString="" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -42,7 +42,7 @@
                <Insets />
             </HBox.margin>
          </Button>
-         <Button id="exitButton" ellipsisString="" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
+         <Button id="exitButton" ellipsisString="" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
             <font>
                <Font />
             </font>
@@ -59,7 +59,7 @@
    </top>
    <center>
       <VBox styleClass="wrapper-pane" BorderPane.alignment="CENTER">
-         <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+         <TabPane focusTraversable="false" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
             <Tab closable="false" text="Monitoring">
                <GridPane id="monitoring-view-gridpane">
                   <columnConstraints>
@@ -181,7 +181,7 @@
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
-                     <Button id="open-gate-button" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Open Gate" textOverrun="CLIP" GridPane.columnSpan="2">
+                     <Button id="open-gate-button" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleOpenGateButton" text="Open Gate" textOverrun="CLIP" GridPane.columnSpan="2">
                         <padding>
                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                         </padding>

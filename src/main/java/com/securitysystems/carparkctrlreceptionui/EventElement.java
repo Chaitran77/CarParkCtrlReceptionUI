@@ -19,3 +19,20 @@ public class EventElement extends AnchorPane {
 	}
 }
 */
+
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+
+public class EventElement {
+	// class for the following method for use on click and focus events
+	public static void selectInScrollpane(AnchorPane eventElement, Scene monitoringScene) {
+		Log log = (Log) eventElement.getUserData();
+
+		System.out.println(log);
+		LabelSetters.resetEventElements(monitoringScene);
+		eventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -blue-bg-color;");
+
+		LabelSetters.setCurrentLogSectionLabels(log, monitoringScene, true);
+		LabelSetters.setSnapshotImages(log, monitoringScene);
+	}
+}
