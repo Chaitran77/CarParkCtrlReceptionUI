@@ -44,6 +44,16 @@ public class LoadLatestLogsTask extends TimerTask {
 		FXMLLoader eventElementLoader = new FXMLLoader(getClass().getResource("/carpark-monitoring-view/EventElement.fxml"));
 		AnchorPane newEventElement = eventElementLoader.load();
 
+		newEventElement.focusedProperty().addListener((observableValue, prevState, newState) -> {
+//			TODO
+			if (newState) {
+				System.out.println("Focussed");
+				// handle click
+			} else {
+				System.out.println("Unfocussed");
+			}
+		});
+
 		newEventElement.setUserData(event);
 		((EventElementController)eventElementLoader.getController()).setMonitoringScene(this.applicationScene); // Referenced this answer on passing parameters to FXML controllers: https://stackoverflow.com/a/30815504/7169383
 

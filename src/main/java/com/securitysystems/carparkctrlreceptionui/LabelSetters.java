@@ -1,5 +1,7 @@
 package com.securitysystems.carparkctrlreceptionui;
 
+import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -79,6 +81,14 @@ public class LabelSetters {
 		}
 		if (log.ExitImageBase64 != null) {
 			((ImageView) monitoringScene.lookup("#exit-snapshot-view")).setImage(new Image("data:image/jpeg;base64," + log.ExitImageBase64));
+		}
+	}
+
+	public static void resetEventElements(Scene monitoringScene) {
+		ObservableList<Node> eventsElements = ((VBox) monitoringScene.lookup("#events-container")).getChildren();
+
+		for (int i = 0; i < eventsElements.size(); i++) {
+			eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-acknowledged-color;");
 		}
 	}
 

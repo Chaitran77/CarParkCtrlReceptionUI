@@ -14,7 +14,7 @@ public class EventElementController {
 		this.monitoringScene = scene;
 	}
 	@FXML
-	protected void handleClick(MouseEvent event) {
+	public void handleClick(MouseEvent event) {
 		System.out.println("EVENT ELEM CLICKED");
 		// change colour and load event data in UI
 		System.out.println(monitoringScene);
@@ -28,6 +28,7 @@ public class EventElementController {
 		Log log = (Log) eventElement.getUserData();
 
 		System.out.println(log);
+		LabelSetters.resetEventElements(monitoringScene);
 		eventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -blue-bg-color;");
 
 		LabelSetters.setCurrentLogSectionLabels(log, monitoringScene, true);

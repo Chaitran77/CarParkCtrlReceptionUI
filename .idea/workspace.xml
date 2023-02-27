@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Major Changes.&#10;Implemented: Login system (attempts counter, retrieve and hashes salt value), removed close gate button (unnecessary), events display in correct order, clicking an event displays its information in the UI (snapshot images change), added search tab (no functionality), made snapshot images fit properly, modularised and grouped label setting calls in a more memory-efficient way, changed attribute types in Log and Carpark classes to allow for nulls (which are processed). Implemented more of HttpRequester.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Carpark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Hasher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LabelSetters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/SearchUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HttpRequester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/HttpRequester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/loadLatestLogsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LabelSetters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LabelSetters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677021690449</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Major Changes.&#10;Implemented: Login system (attempts counter, retrieve and hashes salt value), removed close gate button (unnecessary), events display in correct order, clicking an event displays its information in the UI (snapshot images change), added search tab (no functionality), made snapshot images fit properly, modularised and grouped label setting calls in a more memory-efficient way, changed attribute types in Log and Carpark classes to allow for nulls (which are processed). Implemented more of HttpRequester.">
+      <created>1677441190974</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677441190974</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
