@@ -94,7 +94,7 @@
 #event-element-grid{
     -fx-background-color: -event-acknowledged-color;
     -fx-border-color: -bg-color;
-    -fx-border-width: 0 0 5px 0;
+/*    -fx-border-width: 0 0 5px 0; gaps now created with VBox's spacing attr. */
 }
 
 #top-split-pane{
@@ -109,7 +109,7 @@
     -fx-border-width: 3px;
 }
 
-#events-scroll-box  {
+#events-scroll-box, #search-events-scroll-box  {
 	-fx-background-color: -bg-color;
 	-fx-border-color: -blue-bg-color;
 	-fx-border-width: 0 0 0 3px;
@@ -123,6 +123,10 @@
     -fx-border-width: 3px !important;
 }
 
+#event-element:hover {
+    -fx-border-color: white !important;
+    -fx-border-width: 3px !important;
+}
 
 /* search tab */
 #search-checkbox {

@@ -167,7 +167,7 @@
                   </SplitPane>
                   <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;" vbarPolicy="NEVER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
                      <AnchorPane id="events-scroll-box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-                        <VBox id="events-container" layoutX="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS" />
+                        <VBox id="events-container" layoutX="3.0" maxHeight="1.7976931348623157E308" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS" />
                      </AnchorPane>
                      <GridPane.margin>
                         <Insets />
@@ -200,10 +200,10 @@
             </Tab>
             <Tab closable="false" text="Search">
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <GridPane id="search-view-gridpane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                        <columnConstraints>
-                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
                        </columnConstraints>
                        <rowConstraints>
@@ -212,9 +212,9 @@
                          <RowConstraints minHeight="10.0" percentHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
                          <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
                        </rowConstraints>
-                           <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER" GridPane.columnIndex="2" GridPane.rowSpan="4">
-                               <AnchorPane id="search-events-scroll-box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-                                       <VBox id="search-events-container" alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" /></AnchorPane>
+                           <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" style="-fx-background-color: transparent;" vbarPolicy="NEVER" GridPane.columnIndex="2" GridPane.rowSpan="4">
+                               <AnchorPane id="search-events-scroll-box" maxWidth="1.7976931348623157E308">
+                                       <VBox id="search-events-container" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS" /></AnchorPane>
                            </ScrollPane>
                            <Label alignment="CENTER" text="Search event log" textAlignment="CENTER" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="LEFT">
                               <font>
@@ -235,7 +235,7 @@
                                  <Insets left="20.0" top="25.0" />
                               </padding>
                            </HBox>
-                           <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="2.0" GridPane.rowIndex="2">
                                  <Label text="Event ID:" textFill="WHITE">
                                     <font>
                                        <Font size="18.0" />
@@ -263,46 +263,46 @@
                                     </font>
                                  </Label>
                               <padding>
-                                 <Insets left="20.0" top="20.0" />
+                                 <Insets left="20.0" top="10.0" />
                               </padding></VBox>
-                           <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="2.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                               <padding>
-                                 <Insets top="20.0" />
+                                 <Insets top="10.0" />
                               </padding>
                         <children>
-                           <Label textFill="WHITE">
+                           <Label id="search-event-id-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
                            </Label>
-                           <Label textFill="WHITE">
+                           <Label id="search-numberplate-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
                            </Label>
-                           <Label textFill="WHITE">
+                           <Label id="search-entry-time-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
                            </Label>
-                           <Label textFill="WHITE">
+                           <Label id="search-exit-time-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
                            </Label>
-                           <Label textFill="WHITE">
+                           <Label id="search-acknowledged-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
                            </Label>
-                           <Label textFill="WHITE">
+                           <Label id="search-known-vehicle-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
                            </Label>
                         </children></VBox>
-                           <ImageView pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                           <ImageView pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                           <ImageView id="search-exit-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                           <ImageView id="search-entry-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                      </GridPane></AnchorPane>
             </Tab>
             <Tab closable="false" text="Settings">

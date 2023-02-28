@@ -5,9 +5,9 @@ import javafx.scene.Scene;
 
 public class CarparkMonitoringController {
 
-	public Scene monitoringScene;
-	public void setMonitoringScene(Scene scene) {
-		this.monitoringScene = scene;
+	public static Scene applicationScene;
+	public void setApplicationScene(Scene scene) {
+		CarparkMonitoringController.applicationScene = scene;
 	}
 
 	@FXML
@@ -17,6 +17,7 @@ public class CarparkMonitoringController {
 
 	@FXML
 	protected void handleSearchButtonClick() {
-		SearchUtils.performSearch();
+		SearchUtils.performSearch(CarparkMonitoringController.applicationScene);
 	}
+
 }

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -69,6 +70,20 @@ public class CarparkMonitoringApplication extends Application {
 				}
 			});
 		*/
+
+		GridPane monitoringViewGridpane = (GridPane)scene.lookup("#monitoring-view-gridpane");
+		// width of each image is 40% of the gridpane's width ((100%-20%)/2). EventsContainer's width is 20%.
+		// image preserveRatios are set to true so heightProperty left unset.
+		// used documentation https://openjfx.io/javadoc/11/javafx.graphics/javafx/scene/image/ImageView.html#fitWidthProperty()
+		((ImageView) scene.lookup("#entry-snapshot-view")).fitWidthProperty().bind(monitoringViewGridpane.widthProperty().multiply(.4));
+		((ImageView) scene.lookup("#exit-snapshot-view")).fitWidthProperty().bind(monitoringViewGridpane.widthProperty().multiply(.4));
+
+
+		// search view (tab) follows same grid layout, so widths can be bound to monitoringViewGridpane
+		((ImageView) scene.lookup("#search-entry-snapshot-view")).fitWidthProperty().bind(monitoringViewGridpane.widthProperty().multiply(.4));
+		((ImageView) scene.lookup("#search-exit-snapshot-view")).fitWidthProperty().bind(monitoringViewGridpane.widthProperty().multiply(.4));
+
+		((CarparkMonitoringController)fxmlLoader.getController()).setApplicationScene(scene);
 
 		stage.setTitle("Carpark Monitoring and Control Client");
 		stage.initStyle(StageStyle.UNDECORATED); // remove system's window styling
