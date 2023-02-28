@@ -25,9 +25,9 @@ public class LabelSetters {
 	            ((Label) newEventElement.lookup("#numberplate-label")).setText(event.Numberplate);
 	        }
 		*/
-		((Label) eventElement.lookup("#numberplate-label")).setText((log.Numberplate!=null)?(log.Numberplate):("Unknown"));
+		((Label) eventElement.lookup("#numberplate-label")).setText((log.Numberplate!=null&&!log.Numberplate.equals(""))?(log.Numberplate):("Unknown"));
 		((Label) eventElement.lookup("#entry-timestamp-label")).setText((log.EntryTimestamp!=null)?(log.EntryTimestamp.toString()):("Unknown"));
-		((Label) eventElement.lookup("#exit-timestamp-label")).setText((log.ExitTimestamp!=null)?(log.ExitTimestamp.toString()):("Unknown"));
+		((Label) eventElement.lookup("#exit-timestamp-label")).setText((log.ExitTimestamp!=null)?(log.ExitTimestamp.toString()):("Not yet exited."));
 	}
 	public static void setCurrentLogSectionLabels(Log log, Scene monitoringScene, boolean isSelectedEvent) {
 		((Label) monitoringScene.lookup("#current-data-heading")).setText((isSelectedEvent)?("Selected Event: "):("Last Detection: "));
