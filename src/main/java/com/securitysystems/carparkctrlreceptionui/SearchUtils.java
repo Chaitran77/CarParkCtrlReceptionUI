@@ -1,6 +1,7 @@
 package com.securitysystems.carparkctrlreceptionui;
 
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.util.Hashtable;
@@ -12,11 +13,14 @@ public class SearchUtils {
 //	}
 
 
-	public static Hashtable<String, Object> getSearchParameters() {
-		return new Hashtable<String, Object>();
+	public static Hashtable<String, Object> getSearchParameters(Scene applicationScene) {
+		Hashtable<String,Object> searchParameters = new Hashtable<String, Object>();
+		searchParameters.put("numberplate", ((TextField)applicationScene.lookup("#search-term-field")).getText());
+		return searchParameters;
 	}
 
 	public static void performSearch(Scene applicationScene) {
+		System.out.println(getSearchParameters(applicationScene));
 		performSort(applicationScene); // for now
 		/* serach numberplate displays most recent logs for that numberplate
 		 * 1) Get search parameters from inputs
@@ -28,11 +32,10 @@ public class SearchUtils {
 	public static void performSort(Scene applicationScene) {
 
 
-		getSearchParameters();
-
 		try {
 			Log[] logs = HttpRequester.getLogs(10);
 			MergeSort.mergeSort(logs); // Log[] sortedLogs =
+			LabelSetters.clearEventsContainer(false, applicationScene);
 			for (int i = 0; i < logs.length; i++) {
 				EventElement.loadIntoScrollpane(logs[i], false, applicationScene);
 			}

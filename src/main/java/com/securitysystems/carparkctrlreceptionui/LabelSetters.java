@@ -52,6 +52,11 @@ public class LabelSetters {
 		}
 	}
 
+	public static void clearEventsContainer(boolean isMonitoringView, Scene applicationScene) {
+		VBox eventsContainer = (VBox) applicationScene.lookup((isMonitoringView)?("#events-container"):("#search-events-container"));
+		eventsContainer.getChildren().clear();
+	}
+
 	public static class MonitoringView {
 		public static void setCurrentLogSectionLabels(Log log, Scene monitoringScene, boolean isSelectedEvent) {
 			((Label) monitoringScene.lookup("#current-data-heading")).setText((isSelectedEvent)?("Selected Event: "):("Last Detection: "));

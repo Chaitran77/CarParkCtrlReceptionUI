@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -19,10 +20,6 @@ public class LoadLatestLogsTask extends TimerTask {
 		this.applicationScene = applicationScene;
 	}
 
-	public void clearEventsContainer() {
-		VBox eventsContainer = (VBox) this.applicationScene.lookup("#events-container");
-		eventsContainer.getChildren().clear();
-	}
 	public void loadInUI(Log event, boolean isLatestEvent) throws IOException {
 		EventElement.loadIntoScrollpane(event, true, this.applicationScene);
 
@@ -51,7 +48,7 @@ public class LoadLatestLogsTask extends TimerTask {
 				System.out.println(events.length + " EVENTS RECEIVED");
 
 				// update events
-				clearEventsContainer();
+				LabelSetters.clearEventsContainer(true, this.applicationScene);
 
 				// update most recent detection (entry/exit) labels with first element (most recent)
 				// Events ScrollBox should be populated with most recent first therefore forward for loop
