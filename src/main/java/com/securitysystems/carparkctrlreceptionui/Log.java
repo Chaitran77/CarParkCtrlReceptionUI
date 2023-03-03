@@ -38,13 +38,17 @@ public class Log {
 //                "EventID=" + EventID +
 //                ", CameraID=" + CameraID +
 //                ", VehicleID=" + VehicleID +
-                ", Numberplate='" + Numberplate + '\'' +
+                " Numberplate='" + Numberplate + '\'' +
                 ", EntryTimestamp=" + EntryTimestamp +
 //                ", ExitTimestamp=" + ExitTimestamp +
 //                ", EntryImageBase64='" + EntryImageBase64 + '\'' +
 //                ", ExitImageBase64='" + ExitImageBase64 + '\'' +
 //                ", Acknowledged=" + Acknowledged +
 //                ", KnownVehicle=" + KnownVehicle +
-                "} \n";
+                "}";
+    }
+
+    public static int compareNumberplate(Log a, Log b) {
+        return a.Numberplate.compareToIgnoreCase(b.Numberplate);
     }
 }

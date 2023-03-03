@@ -4,10 +4,6 @@ import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.util.TimerTask;
@@ -43,7 +39,7 @@ public class LoadLatestLogsTask extends TimerTask {
 
 			try {
 
-				events = HttpRequester.getLogs(5);
+				events = HttpRequester.getLogs(15);
 				carpark = HttpRequester.getCarpark();
 				System.out.println(events.length + " EVENTS RECEIVED");
 

@@ -32,6 +32,7 @@ public class CarparkMonitoringApplication extends Application {
 	private Timer logRetreiveTimer;
 	@Override
 	public void start(Stage stage) throws IOException {
+		System.out.println("HELLO".compareToIgnoreCase("hello"));
 
 		loginSequence(5);
 
