@@ -64,8 +64,15 @@ public class EventElement {
 				EventElement.selectInScrollpane(newEventElement, isMonitoringScrollpane, applicationScene);
 			} else {
 				System.out.println("Unfocused");
+				if (!log.KnownVehicle) {
+					newEventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -event-unknown-vehicle-color;");
+				}
 			}
 		});
+
+		if (!log.KnownVehicle) {
+			newEventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -event-unknown-vehicle-color;");
+		}
 
 		newEventElement.setUserData(log);
 		((EventElementController)eventElementLoader.getController()).setApplicationScene(applicationScene); // Referenced this answer on passing parameters to FXML controllers: https://stackoverflow.com/a/30815504/7169383

@@ -34,7 +34,11 @@ public class LabelSetters {
 		ObservableList<Node> eventsElements = ((VBox) monitoringScene.lookup((isMonitoringView)?("#events-container"):("#search-events-container"))).getChildren();
 
 		for (int i = 0; i < eventsElements.size(); i++) {
-			eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-acknowledged-color;");
+			if (((Log)eventsElements.get(i).getUserData()).KnownVehicle){
+				eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-acknowledged-color;");
+			} else {
+				eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-unknown-vehicle-color;");
+			}
 		}
 	}
 

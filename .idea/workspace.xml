@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97cabde1-2072-4986-989c-3b1667d484cf" name="Changes" comment="Got sorting (merge) and searching (binary) functionality working properly (had to compromise on merge sort with numberplates, but works with Dates - entry and exit timestamps).&#10;Also stopped events from decreasing size (squishing) in scrollpane when too many are added by fixing the height of the EventElement s.">
-      <changelist_data name="Kiran Patel" email="kiran@inteleyes.com" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/BinarySearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/CarparkMonitoringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LoadLatestLogsTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/SearchUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/SearchUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/EventElement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/EventElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LabelSetters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/securitysystems/carparkctrlreceptionui/LabelSetters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/carpark-monitoring-view/carpark-monitoring-view.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677540564791</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Got sorting (merge) and searching (binary) functionality working properly (had to compromise on merge sort with numberplates, but works with Dates - entry and exit timestamps).&#10;Also stopped events from decreasing size (squishing) in scrollpane when too many are added by fixing the height of the EventElement s.">
+      <created>1677827245736</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677827245736</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
