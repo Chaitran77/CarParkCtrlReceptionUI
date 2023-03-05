@@ -11,4 +11,5 @@ public class Carpark {
 		this.TotalSpaces = TotalSpaces;
 		this.FreeSpaces = FreeSpaces;
 	}
+
 }

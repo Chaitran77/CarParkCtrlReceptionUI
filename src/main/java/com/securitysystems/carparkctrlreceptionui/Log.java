@@ -35,17 +35,17 @@ public class Log {
     @Override
     public String toString() {
         return "Log{" +
-//                "EventID=" + EventID +
-//                ", CameraID=" + CameraID +
-//                ", VehicleID=" + VehicleID +
-                " Numberplate='" + Numberplate + '\'' +
+                "EventID=" + EventID +
+                ", CameraID=" + CameraID +
+                ", VehicleID=" + VehicleID +
+                ", Numberplate='" + Numberplate + '\'' +
                 ", EntryTimestamp=" + EntryTimestamp +
-//                ", ExitTimestamp=" + ExitTimestamp +
-//                ", EntryImageBase64='" + EntryImageBase64 + '\'' +
-//                ", ExitImageBase64='" + ExitImageBase64 + '\'' +
-//                ", Acknowledged=" + Acknowledged +
-//                ", KnownVehicle=" + KnownVehicle +
-                "}";
+                ", ExitTimestamp=" + ExitTimestamp +
+                ", EntryImageBase64='" + " EntryImageBase64 " + '\'' +
+                ", ExitImageBase64='" + " ExitImageBase64 " + '\'' +
+                ", Acknowledged=" + Acknowledged +
+                ", KnownVehicle=" + KnownVehicle +
+                '}';
     }
 
     public static int compareNumberplate(Log a, Log b) {
