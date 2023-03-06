@@ -5,6 +5,8 @@ import java.util.Date;
 
 public class MergeSort {
 
+    // REFERENCE: https://www.geeksforgeeks.org/merge-sort/
+    // This is (mostly) my own implementation of a merge sort based on the pseudocode algorithm given on the above page.
     public static void mergeSort(Log[] logsToSort, String by) {
 
         // could not get merge sort for numberplates to work (could not figure out why),

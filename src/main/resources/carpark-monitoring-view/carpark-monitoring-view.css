@@ -5,7 +5,8 @@
 	-blue-bg-color: #679df6;
 	-darker-blue-bg-color: #41649e;
 
-	-event-unknown-vehicle-color: #BD4900;
+	-event-latest-color: yellow;
+	-event-unknown-vehicle-color: #FF9800;
 	-event-acknowledged-color: #3159c8;
 	-event-unacknowledged-color: #3159c8;
 
@@ -104,9 +105,18 @@
 }
 
 #open-gate-button {
-    -fx-border-color: #f28c35;
     -fx-background-color: #0A0;
+    -fx-background-radius: 10px;
+    -fx-border-color: #f28c35;
     -fx-border-width: 3px;
+    -fx-border-radius: 10px;
+}
+
+#sort-entry-timestamp-button {
+    -fx-background-radius: 10px;
+    -fx-border-color: #f28c35;
+    -fx-border-width: 3px;
+    -fx-border-radius: 10px;
 }
 
 #events-scroll-box, #search-events-scroll-box  {

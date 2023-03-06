@@ -27,7 +27,7 @@ public class SearchUtils {
 			System.out.println(Arrays.toString(logs));
 			LabelSetters.clearEventsContainer(false, applicationScene);
 			for (int i = 0; i < logs.length; i++) {
-				EventElement.loadIntoScrollpane(logs[i], false, applicationScene);
+				EventElement.loadIntoScrollpane(logs[i], false, false, applicationScene);
 			}
 //			performSort(applicationScene, logs); // for now
 		} catch (IOException e) {

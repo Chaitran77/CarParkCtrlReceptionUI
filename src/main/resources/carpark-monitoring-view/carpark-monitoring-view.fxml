@@ -194,11 +194,7 @@
                         </font>
                      </Button>
                   </GridPane>
-                  <ButtonBar buttonMinWidth="10.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                    <buttons>
-                        <Button id="sort-entry-timestamp-button" layoutX="149.0" layoutY="23.0" mnemonicParsing="false" text="Sort by: Entry tsp. Ascending" />
-                    </buttons>
-                  </ButtonBar>
+                  <Button id="sort-entry-timestamp-button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeMonitoringSortType" styleClass="white-bg" text="Sort by: Entry time, descending" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                   <ImageView id="exit-snapshot-view" pickOnBounds="true" preserveRatio="true" styleClass="snapshot-view" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <ImageView id="entry-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                </GridPane>

@@ -29,10 +29,9 @@ public class CarparkMonitoringApplication extends Application {
 	private double xOffset;
 	private double yOffset;
 
-	private Timer logRetreiveTimer;
+	private Timer logRetrieveTimer;
 	@Override
 	public void start(Stage stage) throws IOException {
-		System.out.println("HELLO".compareToIgnoreCase("hello"));
 
 		loginSequence(5);
 
@@ -91,8 +90,8 @@ public class CarparkMonitoringApplication extends Application {
 		stage.setScene(scene);
 		stage.show();
 
-		logRetreiveTimer = new Timer(); // below: Passing scene which elements can be derived from to avoid having many parameters
-		logRetreiveTimer.schedule(new LoadLatestLogsTask(scene), 30, TimeUnit.SECONDS.toMillis(10));
+		logRetrieveTimer = new Timer(); // below: Passing scene which elements can be derived from to avoid having many parameters
+		logRetrieveTimer.schedule(new LoadLatestLogsTask(scene), 30, TimeUnit.SECONDS.toMillis(10));
 	}
 
 	public static void loginSequence(int loginAttemptsRemaining) { // use of remaining eliminates use of maxAttempts parameter
@@ -174,6 +173,6 @@ public class CarparkMonitoringApplication extends Application {
 
 	@Override
 	public void stop() {
-		logRetreiveTimer.cancel();
+		logRetrieveTimer.cancel();
 	}
 }

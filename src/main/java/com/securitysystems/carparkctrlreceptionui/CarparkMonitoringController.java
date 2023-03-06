@@ -20,4 +20,9 @@ public class CarparkMonitoringController {
 		SearchUtils.performSearch(CarparkMonitoringController.applicationScene);
 	}
 
+	@FXML
+	protected void changeMonitoringSortType() {
+
+	}
+
 }

@@ -17,7 +17,7 @@ public class LoadLatestLogsTask extends TimerTask {
 	}
 
 	public void loadInUI(Log event, boolean isLatestEvent) throws IOException {
-		EventElement.loadIntoScrollpane(event, true, this.applicationScene);
+		EventElement.loadIntoScrollpane(event, true, isLatestEvent, this.applicationScene);
 
 		// set the Last Detection section's labels if this is the most recent event
 		if (isLatestEvent) LabelSetters.MonitoringView.setCurrentLogSectionLabels(event, this.applicationScene, false);
@@ -39,7 +39,7 @@ public class LoadLatestLogsTask extends TimerTask {
 
 			try {
 
-				events = HttpRequester.getLogs(15);
+				events = HttpRequester.getLogs(20);
 				carpark = HttpRequester.getCarpark();
 				System.out.println(events.length + " EVENTS RECEIVED");
 

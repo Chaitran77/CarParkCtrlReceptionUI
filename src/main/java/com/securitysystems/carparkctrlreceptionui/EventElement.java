@@ -21,6 +21,7 @@ public class EventElement extends AnchorPane {
 */
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -46,7 +47,7 @@ public class EventElement {
 		}
 	}
 
-	public static void loadIntoScrollpane(Log log, boolean isMonitoringScrollpane, Scene applicationScene) throws IOException {
+	public static void loadIntoScrollpane(Log log, boolean isMonitoringScrollpane, boolean isLatestEvent, Scene applicationScene) throws IOException {
 		// original plan:
 		// To prevent use of a global array to store the current Log objects, an extended AnchorPane, EventElement, will be responsible for its own Log object containing the information of the Log it represents
 		// then when the user clicks on an EventElement, the Log is used to populate the labels in the window to show its information (times, numberplate, images, etc...)
@@ -55,6 +56,8 @@ public class EventElement {
 
 		FXMLLoader eventElementLoader = new FXMLLoader(EventElement.class.getResource("/carpark-monitoring-view/EventElement.fxml"));
 		AnchorPane newEventElement = eventElementLoader.load();
+
+		Node newEventElementGrid = newEventElement.lookup("#event-element-grid");
 
 		newEventElement.focusedProperty().addListener((observableValue, prevState, newState) -> {
 //			TODO: DOCUMENT THIS
@@ -65,13 +68,17 @@ public class EventElement {
 			} else {
 				System.out.println("Unfocused");
 				if (!log.KnownVehicle) {
-					newEventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -event-unknown-vehicle-color;");
+					newEventElementGrid.setStyle("-fx-background-color: -event-unknown-vehicle-color;");
 				}
 			}
 		});
 
+		// set colour styling
 		if (!log.KnownVehicle) {
-			newEventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -event-unknown-vehicle-color;");
+			newEventElementGrid.setStyle("-fx-background-color: -event-unknown-vehicle-color;");
+		}
+		if (isLatestEvent) {
+			newEventElementGrid.setStyle(newEventElementGrid.getStyle() + " -fx-border-width: 3px; -fx-border-color: -event-latest-color;");
 		}
 
 		newEventElement.setUserData(log);
