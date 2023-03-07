@@ -91,7 +91,7 @@ public class CarparkMonitoringApplication extends Application {
 		stage.show();
 
 		logRetrieveTimer = new Timer(); // below: Passing scene which elements can be derived from to avoid having many parameters
-		logRetrieveTimer.schedule(new LoadLatestLogsTask(scene), 30, TimeUnit.SECONDS.toMillis(30));
+		logRetrieveTimer.schedule(new LoadLatestLogsTask(scene), 30, TimeUnit.SECONDS.toMillis(40));
 	}
 
 	public static void loginSequence(int loginAttemptsRemaining) { // use of remaining eliminates use of maxAttempts parameter

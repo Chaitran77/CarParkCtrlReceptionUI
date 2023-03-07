@@ -39,7 +39,7 @@ public class LoadLatestLogsTask extends TimerTask {
 
 			try {
 
-				events = HttpRequester.getLogs(15);
+				events = HttpRequester.getLogs(20);
 				carpark = HttpRequester.getCarpark();
 				System.out.println(events.length + " EVENTS RECEIVED");
 

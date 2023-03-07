@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 public class HttpRequester {
 
@@ -18,7 +20,11 @@ public class HttpRequester {
 		Gson g = new Gson();
 
 		// if the data is null (server refused to connect or sent nothing) trigger catch block, otherwise deserialize JSON and return Log[]
+
 		String data = executeGetRequest("http://81.107.245.60:80/logData/" + count);
+		int numberOfBytes = data.getBytes(StandardCharsets.UTF_8).length;
+		System.out.println(numberOfBytes + " bytes = " + numberOfBytes/1000000d + " megabytes");
+
 		if (data == null) throw new NullPointerException("Server refused to connect");
 		return g.fromJson(data, Log[].class);
 	}
