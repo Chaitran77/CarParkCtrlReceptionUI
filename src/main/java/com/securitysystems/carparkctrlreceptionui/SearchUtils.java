@@ -21,7 +21,7 @@ public class SearchUtils {
 		System.out.println(searchParameters.get("numberplate").toString());
 
 		try {
-			Log[] logs = HttpRequester.getLogs(10);
+			Log[] logs = HttpRequester.getLogs(30);
 			logs = BinarySearch.binarySearch(logs, searchParameters.get("numberplate").toString());
 //			MergeSort.mergeSort(logs, "numberplate");
 			System.out.println(Arrays.toString(logs));
