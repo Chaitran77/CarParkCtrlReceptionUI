@@ -37,7 +37,7 @@ public class EventElement {
 		System.out.println(isMonitoringScrollpane);
 
 		LabelSetters.resetEventElementStyles(applicationScene, isMonitoringScrollpane); // set all elements to base style
-		eventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -blue-bg-color;"); // modify (highlight) style of this element
+		eventElement.lookup("#event-element-grid").setStyle("-fx-background-color: -event-selected-color;"); // modify (highlight) style of this element
 		LabelSetters.setSnapshotImages(log, isMonitoringScrollpane, applicationScene);
 
 		if (isMonitoringScrollpane) {

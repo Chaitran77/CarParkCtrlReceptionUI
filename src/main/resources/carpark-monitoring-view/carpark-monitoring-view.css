@@ -6,9 +6,9 @@
 	-darker-blue-bg-color: #41649e;
 
 	-event-latest-color: yellow;
-	-event-unknown-vehicle-color: #FF9800;
-	-event-acknowledged-color: #3159c8;
-	-event-unacknowledged-color: #3159c8;
+	-event-unknown-vehicle-color: #B95900;
+	-event-known-vehicle-color: #77bb41;
+	-event-selected-color: #3159c8;
 
 }
 
@@ -93,7 +93,7 @@
 /* in-tab styling follows */
 /* monitoring tab */
 #event-element-grid{
-    -fx-background-color: -event-acknowledged-color;
+    -fx-background-color: -event-known-color;
     -fx-border-color: -bg-color;
 /*    -fx-border-width: 0 0 5px 0; gaps now created with VBox's spacing attr. */
 }

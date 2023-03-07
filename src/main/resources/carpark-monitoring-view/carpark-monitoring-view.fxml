@@ -194,7 +194,7 @@
                         </font>
                      </Button>
                   </GridPane>
-                  <Button id="sort-entry-timestamp-button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeMonitoringSortType" styleClass="white-bg" text="Sort by: Entry time, descending" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button id="sort-monitoring-scrollpane-button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeMonitoringSortType" styleClass="white-bg" text="Sort by: Entry time, descending" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                   <ImageView id="exit-snapshot-view" pickOnBounds="true" preserveRatio="true" styleClass="snapshot-view" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                   <ImageView id="entry-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                </GridPane>
@@ -253,11 +253,6 @@
                                     <font>
                                        <Font size="18.0" />
                                     </font></Label>
-                                 <Label layoutX="10.0" layoutY="92.0" text="Acknowledged?" textFill="WHITE">
-                                    <font>
-                                       <Font size="18.0" />
-                                    </font>
-                                 </Label>
                                  <Label layoutX="10.0" layoutY="119.0" text="Known vehicle?" textFill="WHITE">
                                     <font>
                                        <Font size="18.0" />
@@ -270,7 +265,6 @@
                               <padding>
                                  <Insets top="10.0" />
                               </padding>
-                        <children>
                            <Label id="search-event-id-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
@@ -291,17 +285,11 @@
                                  <Font size="18.0" />
                               </font>
                            </Label>
-                           <Label id="search-acknowledged-label" textFill="WHITE">
-                              <font>
-                                 <Font size="18.0" />
-                              </font>
-                           </Label>
                            <Label id="search-known-vehicle-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
                               </font>
-                           </Label>
-                        </children></VBox>
+                           </Label></VBox>
                            <ImageView id="search-exit-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                            <ImageView id="search-entry-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                      </GridPane></AnchorPane>

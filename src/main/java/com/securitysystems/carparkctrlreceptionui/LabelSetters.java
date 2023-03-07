@@ -35,7 +35,7 @@ public class LabelSetters {
 
 		for (int i = 0; i < eventsElements.size(); i++) {
 			if (((Log)eventsElements.get(i).getUserData()).KnownVehicle){
-				eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-acknowledged-color;");
+				eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-known-vehicle-color;");
 			} else {
 				eventsElements.get(i).lookup("#event-element-grid").setStyle("-fx-background-color: -event-unknown-vehicle-color;");
 			}
@@ -125,7 +125,6 @@ public class LabelSetters {
 			((Label) applicationScene.lookup("#search-numberplate-label")).setText((log.Numberplate!=null)?(log.Numberplate):("Unknown"));
 			((Label) applicationScene.lookup("#search-entry-time-label")).setText((log.EntryTimestamp!=null)?(log.EntryTimestamp.toString()):("Unknown"));
 			((Label) applicationScene.lookup("#search-exit-time-label")).setText((log.ExitTimestamp!=null)?(log.ExitTimestamp.toString()):("Unknown"));
-			((Label) applicationScene.lookup("#search-acknowledged-label")).setText((log.Acknowledged)?("Yes"):("No"));
 			((Label) applicationScene.lookup("#search-known-vehicle-label")).setText((log.KnownVehicle)?("Yes"):("No"));
 
 

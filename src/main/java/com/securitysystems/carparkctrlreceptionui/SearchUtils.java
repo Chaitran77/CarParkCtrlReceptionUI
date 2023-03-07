@@ -21,7 +21,7 @@ public class SearchUtils {
 		System.out.println(searchParameters.get("numberplate").toString());
 
 		try {
-			Log[] logs = HttpRequester.getLogs(30);
+			Log[] logs = HttpRequester.getLogs(10);
 			logs = BinarySearch.binarySearch(logs, searchParameters.get("numberplate").toString());
 //			MergeSort.mergeSort(logs, "numberplate");
 			System.out.println(Arrays.toString(logs));
@@ -42,8 +42,8 @@ public class SearchUtils {
 		 * */
 	}
 
-	public static void performSort(Scene applicationScene, Log[] logs, String by) {
-		MergeSort.mergeSort(logs, by); // Log[] sortedLogs =
+	public static void performSort(Log[] logs, String by, String direction) {
+		MergeSort.mergeSort(logs, by, direction); // Log[] sortedLogs =
 	}
 
 }

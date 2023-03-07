@@ -13,13 +13,11 @@ public class Log {
     public Date ExitTimestamp;
     public String EntryImageBase64;
     public String ExitImageBase64;
-
-    public boolean Acknowledged;
     public boolean KnownVehicle;
     // https://stackoverflow.com/a/42884828 to store dates/times
     // client.query will return a timestamp String in the promise result rows
 
-    Log(Integer EventID, Integer CameraID, Integer VehicleID, String Numberplate, Date EntryTimestamp, Date ExitTimestamp, String EntryImageBase64, String ExitImageBase64, boolean Acknowledged, boolean KnownVehicle) {
+    Log(Integer EventID, Integer CameraID, Integer VehicleID, String Numberplate, Date EntryTimestamp, Date ExitTimestamp, String EntryImageBase64, String ExitImageBase64, boolean KnownVehicle) {
         this.EventID = EventID;
         this.CameraID = CameraID;
         this.VehicleID = VehicleID;
@@ -28,7 +26,6 @@ public class Log {
         this.ExitTimestamp = ExitTimestamp;
         this.EntryImageBase64 = EntryImageBase64;
         this.ExitImageBase64 = ExitImageBase64;
-        this.Acknowledged = Acknowledged;
         this.KnownVehicle = KnownVehicle;
     }
 
@@ -43,7 +40,6 @@ public class Log {
                 ", ExitTimestamp=" + ExitTimestamp +
                 ", EntryImageBase64='" + " EntryImageBase64 " + '\'' +
                 ", ExitImageBase64='" + " ExitImageBase64 " + '\'' +
-                ", Acknowledged=" + Acknowledged +
                 ", KnownVehicle=" + KnownVehicle +
                 '}';
     }

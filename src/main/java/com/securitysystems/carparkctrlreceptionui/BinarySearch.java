@@ -7,7 +7,7 @@ public class BinarySearch {
 	// different method name so not confused with a constructor method
 	public static Log[] binarySearch(Log[] logsToSearch, String itemToFind) {
 		// for binary search to work, Logs must already be sorted, so:
-		MergeSort.mergeSort(logsToSearch, "numberplate");
+		MergeSort.mergeSort(logsToSearch, "numberplate", "descending");
 		System.out.println("AFTER MERGE SORT\n" + Arrays.toString(logsToSearch));
 		return search(logsToSearch, itemToFind);
 	}
