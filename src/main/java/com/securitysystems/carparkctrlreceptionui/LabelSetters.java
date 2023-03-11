@@ -61,10 +61,16 @@ public class LabelSetters {
 		eventsContainer.getChildren().clear();
 	}
 
+	public static void setLoadingLabelVisibility(boolean isVisible, Scene applicationScene) {
+		applicationScene.lookup("#global-loading-label").setVisible(isVisible);
+	}
+
 	public static class MonitoringView {
 		public static void setCurrentLogSectionLabels(Log log, Scene monitoringScene, boolean isSelectedEvent) {
 			((Label) monitoringScene.lookup("#current-data-heading")).setText((isSelectedEvent)?("Selected Event: "):("Last Detection: "));
-			((Label) monitoringScene.lookup("#last-event-numberplate-label")).setText((log.Numberplate!=null)?(log.Numberplate):("Unknown"));
+			((Label) monitoringScene.lookup("#last-event-numberplate-label")).setText((log.Numberplate!=null&&!log.Numberplate.equals(""))?(log.Numberplate):("Unknown"));
+			((Label) monitoringScene.lookup("#is-known-vehicle-label")).setText((log.KnownVehicle)?("Authorised vehicle"):("Unauthorised vehicle"));
+			((Label) monitoringScene.lookup("#tenant-label")).setText((log.tenant.Forename == null)?("Unknown tenant"):(log.tenant.Forename + " " + log.tenant.Surname));
 
 
 			if (log.EntryTimestamp == null && log.ExitTimestamp == null) {
@@ -72,12 +78,14 @@ public class LabelSetters {
 				return;
 			}
 			// SOURCE - documentation: https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#between-java.time.temporal.Temporal-java.time.temporal.Temporal-
-			if (log.EntryTimestamp != null) {
-				Duration timeElapsed = Duration.between(log.EntryTimestamp.toInstant(), Instant.now());
-				((Label) monitoringScene.lookup("#last-event-elapsed-time-label")).setText("Entered " + timeElapsed.toHoursPart() + " hour(s) and " + timeElapsed.toMinutesPart() + " minutes ago");
-			} else {
+			// try and display exit time first since it is always in the future compared to entry. If not exited, display entry time.
+			if (log.ExitTimestamp != null) {
 				Duration timeElapsed = Duration.between(log.ExitTimestamp.toInstant(), Instant.now());
 				((Label) monitoringScene.lookup("#last-event-elapsed-time-label")).setText("Exited " + timeElapsed.toHoursPart() + " hour(s) and " + timeElapsed.toMinutesPart() + " minutes ago");
+
+			} else {
+				Duration timeElapsed = Duration.between(log.EntryTimestamp.toInstant(), Instant.now());
+				((Label) monitoringScene.lookup("#last-event-elapsed-time-label")).setText("Entered " + timeElapsed.toHoursPart() + " hour(s) and " + timeElapsed.toMinutesPart() + " minutes ago");
 			}
 		}
 
@@ -103,6 +111,10 @@ public class LabelSetters {
 			}
 		}
 
+		public static void setOpenGateButtonState(Scene monitoringScene, boolean disabled) {
+			monitoringScene.lookup("#open-gate-button").setDisable(disabled);
+		}
+
 	}
 
 	public static class SearchView {
@@ -121,7 +133,7 @@ public class LabelSetters {
 				((Label) applicationScene.lookup("#last-event-elapsed-time-label")).setText("Exited " + timeElapsed.toHoursPart() + " hour(s) and " + timeElapsed.toMinutesPart() + " minutes ago");
 			}
 
-			((Label) applicationScene.lookup("#search-event-id-label")).setText((log.EventID!=null)?(log.EventID.toString()):("Unknown"));
+			((Label) applicationScene.lookup("#search-event-id-label")).setText((log.EventID !=null)?(log.EventID.toString()):("Unknown"));
 			((Label) applicationScene.lookup("#search-numberplate-label")).setText((log.Numberplate!=null)?(log.Numberplate):("Unknown"));
 			((Label) applicationScene.lookup("#search-entry-time-label")).setText((log.EntryTimestamp!=null)?(log.EntryTimestamp.toString()):("Unknown"));
 			((Label) applicationScene.lookup("#search-exit-time-label")).setText((log.ExitTimestamp!=null)?(log.ExitTimestamp.toString()):("Unknown"));

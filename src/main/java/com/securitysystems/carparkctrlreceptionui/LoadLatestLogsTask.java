@@ -37,6 +37,8 @@ public class LoadLatestLogsTask extends TimerTask {
 			Log[] events;
 			Carpark carpark;
 
+			LabelSetters.setLoadingLabelVisibility(true, applicationScene);
+
 			try {
 
 				events = HttpRequester.getLogs(20);
@@ -50,6 +52,7 @@ public class LoadLatestLogsTask extends TimerTask {
 				// Events ScrollBox should be populated with most recent first therefore forward for loop
 				for (int i = 0; i < events.length; i++) {
 					Log event = events[i];
+					event.setTenant();
 					loadInUI(event, i == 0);
 				}
 
@@ -59,7 +62,9 @@ public class LoadLatestLogsTask extends TimerTask {
 				// update carpark statistic labels
 				this.loadInUI(carpark);
 
-			} catch (IOException | NullPointerException | Error exception) { // network error or connection refused: Notify user
+
+			} catch (IOException | NullPointerException | Error exception) {
+				// network error or connection refused: Notify user
 				System.out.println("TASK FAILED");
 
 				// set labels to unknown
@@ -69,6 +74,9 @@ public class LoadLatestLogsTask extends TimerTask {
 				errorAlert.show();
 				exception.printStackTrace();
 			}
+
+			LabelSetters.setLoadingLabelVisibility(false, applicationScene);
+
 
 		});
 

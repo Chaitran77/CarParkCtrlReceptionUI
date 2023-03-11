@@ -42,6 +42,14 @@ public class EventElement {
 
 		if (isMonitoringScrollpane) {
 			LabelSetters.MonitoringView.setCurrentLogSectionLabels(log, applicationScene, true);
+
+			// if is not KnownVehicle and entry and exit timestamps are equal (implies never entered), enable open gate button, else disable it.
+			if (!log.KnownVehicle && log.EntryTimestamp.equals(log.ExitTimestamp)) {
+				LabelSetters.MonitoringView.setOpenGateButtonState(applicationScene, false);
+			} else {
+				LabelSetters.MonitoringView.setOpenGateButtonState(applicationScene, true);
+			}
+
 		} else {
 			LabelSetters.SearchView.setCurrentLogSectionLabels(log, applicationScene);
 		}

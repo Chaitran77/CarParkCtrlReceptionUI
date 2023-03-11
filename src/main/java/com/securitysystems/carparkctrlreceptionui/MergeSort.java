@@ -8,6 +8,7 @@ public class MergeSort {
     // REFERENCE: https://www.geeksforgeeks.org/merge-sort/
     // This is (mostly) my own implementation of a merge sort based on the pseudocode algorithm given on the above page.
     public static void mergeSort(Log[] logsToSort, String by, String direction) {
+        System.out.println(Arrays.toString(logsToSort));
 
         // could not get merge sort for numberplates to work (could not figure out why),
         // so replaced with following and a comparison method in the Log class with help of: https://stackoverflow.com/a/48418903/7169383

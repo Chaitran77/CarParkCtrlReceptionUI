@@ -35,10 +35,12 @@ public class HttpRequester {
 		return g.fromJson(data, Carpark.class);
 	}
 
-/*
-    public static void getLatestLog() {}
-    public static void getVehicleTenantRecords() {}
-*/
+	public static Tenant getTenantDataFromLogID(int log_id) throws IOException, NullPointerException {
+		Gson g = new Gson();
+		String data = executeGetRequest("http://81.107.245.60:80/tenantDataFromLogID/" + log_id);
+		if (data == null) throw new NullPointerException("Server refused to connect");
+		return g.fromJson(data, Tenant.class);
+	}
 
 	public static String getLoginSalt(String username) throws IOException, Error {
 		return executeGetRequest("http://81.107.245.60:80/loginSalt?username=" + username);
@@ -122,4 +124,5 @@ public class HttpRequester {
 		inputReader.close();
 		return responseString.toString();
 	}
+
 }

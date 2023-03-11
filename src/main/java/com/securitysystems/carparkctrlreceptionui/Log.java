@@ -1,5 +1,6 @@
 package com.securitysystems.carparkctrlreceptionui;
 
+import java.io.IOException;
 import java.util.Date;
 
 public class Log {
@@ -14,8 +15,7 @@ public class Log {
     public String EntryImageBase64;
     public String ExitImageBase64;
     public boolean KnownVehicle;
-    // https://stackoverflow.com/a/42884828 to store dates/times
-    // client.query will return a timestamp String in the promise result rows
+    public Tenant tenant;
 
     Log(Integer EventID, Integer CameraID, Integer VehicleID, String Numberplate, Date EntryTimestamp, Date ExitTimestamp, String EntryImageBase64, String ExitImageBase64, boolean KnownVehicle) {
         this.EventID = EventID;
@@ -32,16 +32,20 @@ public class Log {
     @Override
     public String toString() {
         return "Log{" +
-                "EventID=" + EventID +
-                ", CameraID=" + CameraID +
-                ", VehicleID=" + VehicleID +
+//                "EventID=" + EventID +
+//                ", CameraID=" + CameraID +
+//                ", VehicleID=" + VehicleID +
                 ", Numberplate='" + Numberplate + '\'' +
-                ", EntryTimestamp=" + EntryTimestamp +
-                ", ExitTimestamp=" + ExitTimestamp +
-                ", EntryImageBase64='" + " EntryImageBase64 " + '\'' +
-                ", ExitImageBase64='" + " ExitImageBase64 " + '\'' +
-                ", KnownVehicle=" + KnownVehicle +
+//                ", EntryTimestamp=" + EntryTimestamp +
+//                ", ExitTimestamp=" + ExitTimestamp +
+//                ", EntryImageBase64='" + " EntryImageBase64 " + '\'' +
+//                ", ExitImageBase64='" + " ExitImageBase64 " + '\'' +
+//                ", KnownVehicle=" + KnownVehicle +
                 '}';
+    }
+
+    public void setTenant() throws IOException {
+        this.tenant = HttpRequester.getTenantDataFromLogID(this.EventID);
     }
 
     public static int compareNumberplate(Log a, Log b) {

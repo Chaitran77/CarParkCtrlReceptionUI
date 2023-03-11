@@ -93,7 +93,7 @@
 /* in-tab styling follows */
 /* monitoring tab */
 #event-element-grid{
-    -fx-background-color: -event-known-color;
+    -fx-background-color: -event-known-vehicle-color;
     -fx-border-color: -bg-color;
 /*    -fx-border-width: 0 0 5px 0; gaps now created with VBox's spacing attr. */
 }
