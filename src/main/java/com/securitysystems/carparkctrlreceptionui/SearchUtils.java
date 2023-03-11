@@ -29,7 +29,7 @@ public class SearchUtils {
 		LabelSetters.setLoadingLabelVisibility(true, applicationScene);
 
 		try {
-			Log[] logs = HttpRequester.getLogs(20);
+			Log[] logs = HttpRequester.getLogs(Settings.getNumberEventsToSearchFrom(applicationScene));
 			logs = BinarySearch.binarySearch(logs, searchParameters.get("numberplate").toString());
 //			MergeSort.mergeSort(logs, "numberplate");
 			System.out.println(Arrays.toString(logs));

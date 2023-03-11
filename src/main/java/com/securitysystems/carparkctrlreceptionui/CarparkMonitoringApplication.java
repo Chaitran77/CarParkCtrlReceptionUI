@@ -83,6 +83,11 @@ public class CarparkMonitoringApplication extends Application {
 		((ImageView) scene.lookup("#search-entry-snapshot-view")).fitWidthProperty().bind(monitoringViewGridpane.widthProperty().multiply(.4));
 		((ImageView) scene.lookup("#search-exit-snapshot-view")).fitWidthProperty().bind(monitoringViewGridpane.widthProperty().multiply(.4));
 
+		// set defaults for settings tab
+		Settings.setUpdateInterval(scene, 40);
+		Settings.setNumberEventsToFetchForMonitoring(scene, 10);
+		Settings.setNumberEventsToSearchFrom(scene, 10);
+
 		((CarparkMonitoringController)fxmlLoader.getController()).setApplicationScene(scene);
 
 		stage.setTitle("Carpark Monitoring and Control Client");
@@ -91,7 +96,7 @@ public class CarparkMonitoringApplication extends Application {
 		stage.show();
 
 		logRetrieveTimer = new Timer(); // below: Passing scene which elements can be derived from to avoid having many parameters
-		logRetrieveTimer.schedule(new LoadLatestLogsTask(scene), 30, TimeUnit.SECONDS.toMillis(40));
+		logRetrieveTimer.schedule(new LoadLatestLogsTask(scene), 30, TimeUnit.SECONDS.toMillis(Settings.getUpdateInterval(scene)));
 	}
 
 	public static void loginSequence(int loginAttemptsRemaining) { // use of remaining eliminates use of maxAttempts parameter

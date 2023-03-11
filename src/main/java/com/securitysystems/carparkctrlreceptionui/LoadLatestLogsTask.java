@@ -41,7 +41,7 @@ public class LoadLatestLogsTask extends TimerTask {
 
 			try {
 
-				events = HttpRequester.getLogs(20);
+				events = HttpRequester.getLogs(Settings.getNumberEventsToFetchForMonitoring(applicationScene));
 				carpark = HttpRequester.getCarpark();
 				System.out.println(events.length + " EVENTS RECEIVED");
 

@@ -109,7 +109,7 @@ public class MergeSort {
                 }
 
             } catch (Exception e){
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 // one of the values is null: Can't compare unknown time so add to right array and push to end
                 if (direction.equals("descending")) {
                     logsToMerge[k++] = rightArray[j++];
