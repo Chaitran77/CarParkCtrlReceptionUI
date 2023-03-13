@@ -10,4 +10,8 @@ public class Tenant {
 		this.Forename = Forename;
 		this.Surname = Surname;
 	}
+
+	public String getFullName() {
+		return this.Forename + " " + this.Surname;
+	}
 }

@@ -9,8 +9,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
 
 public class LabelSetters {
 
@@ -26,8 +29,8 @@ public class LabelSetters {
 	        }
 		*/
 		((Label) eventElement.lookup("#numberplate-label")).setText((log.Numberplate!=null&&!log.Numberplate.equals(""))?(log.Numberplate):("Unknown"));
-		((Label) eventElement.lookup("#entry-timestamp-label")).setText((log.EntryTimestamp!=null)?(log.EntryTimestamp.toString()):("Unknown"));
-		((Label) eventElement.lookup("#exit-timestamp-label")).setText((log.ExitTimestamp!=null)?(log.ExitTimestamp.toString()):("Not yet exited."));
+		((Label) eventElement.lookup("#entry-timestamp-label")).setText((log.EntryTimestamp!=null)?(LabelSetters.formatDate(log.EntryTimestamp)):("Unknown"));
+		((Label) eventElement.lookup("#exit-timestamp-label")).setText((log.ExitTimestamp!=null)?(LabelSetters.formatDate(log.ExitTimestamp)):("Not yet exited."));
 	}
 
 	public static void resetEventElementStyles(Scene monitoringScene, boolean isMonitoringView) {
@@ -134,15 +137,22 @@ public class LabelSetters {
 			}
 
 			((Label) applicationScene.lookup("#search-event-id-label")).setText((log.EventID !=null)?(log.EventID.toString()):("Unknown"));
+			((Label) applicationScene.lookup("#search-camera-id-label")).setText((log.CameraID !=null)?(log.CameraID.toString()):("Unknown"));
 			((Label) applicationScene.lookup("#search-numberplate-label")).setText((log.Numberplate!=null)?(log.Numberplate):("Unknown"));
 			((Label) applicationScene.lookup("#search-entry-time-label")).setText((log.EntryTimestamp!=null)?(log.EntryTimestamp.toString()):("Unknown"));
 			((Label) applicationScene.lookup("#search-exit-time-label")).setText((log.ExitTimestamp!=null)?(log.ExitTimestamp.toString()):("Unknown"));
 			((Label) applicationScene.lookup("#search-known-vehicle-label")).setText((log.KnownVehicle)?("Yes"):("No"));
+			((Label) applicationScene.lookup("#search-tenant-name-label")).setText((log.KnownVehicle != false)?(log.tenant.getFullName()):("Unknown"));
+
 
 
 		}
 
 	}
 
+	protected static String formatDate(Date date) {
+		SimpleDateFormat formatter = new SimpleDateFormat("E HH:mm:ss dd/MM/yyyy");
+		return formatter.format(date);
+	}
 
 }

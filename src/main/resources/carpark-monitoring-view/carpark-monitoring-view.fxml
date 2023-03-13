@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.securitysystems.carparkctrlreceptionui.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -7,7 +8,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import com.securitysystems.carparkctrlreceptionui.IntegerInputField?>
 <BorderPane styleClass="background-pane" stylesheets="@../carpark-monitoring-view/carpark-monitoring-view.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securitysystems.carparkctrlreceptionui.CarparkMonitoringController">
    <top>
       <HBox id="titlebar" maxHeight="50.0" prefHeight="50.0" spacing="30.0" styleClass="window-control-buttons-container" BorderPane.alignment="TOP_RIGHT">
@@ -78,7 +78,7 @@
                      <RowConstraints minHeight="-Infinity" vgrow="ALWAYS" />
                      <RowConstraints minHeight="10.0" percentHeight="10" vgrow="NEVER" />
                   </rowConstraints>
-                  <SplitPane id="top-split-pane" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" GridPane.columnSpan="2">
+                  <SplitPane id="top-split-pane" dividerPositions="0.42" prefHeight="160.0" prefWidth="200.0" GridPane.columnSpan="2">
                       <AnchorPane minHeight="0.0" minWidth="0.0">
                               <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columnConstraints>
@@ -247,6 +247,11 @@
                                     <font>
                                        <Font size="18.0" />
                                     </font></Label>
+                        <Label layoutX="30.0" layoutY="20.0" text="Camera ID:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
                                  <Label text="Numberplate:" textFill="WHITE">
                                     <font>
                                        <Font size="18.0" />
@@ -264,6 +269,11 @@
                                        <Font size="18.0" />
                                     </font>
                                  </Label>
+                        <Label layoutX="30.0" layoutY="20.0" text="Tenant name:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
                               <padding>
                                  <Insets left="20.0" top="10.0" />
                               </padding></VBox>
@@ -276,6 +286,11 @@
                                  <Font size="18.0" />
                               </font>
                            </Label>
+                        <Label id="search-camera-id-label" layoutX="10.0" layoutY="20.0" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
                            <Label id="search-numberplate-label" textFill="WHITE">
                               <font>
                                  <Font size="18.0" />
@@ -295,7 +310,12 @@
                               <font>
                                  <Font size="18.0" />
                               </font>
-                           </Label></VBox>
+                           </Label>
+                        <Label id="search-tenant-name-label" layoutX="10.0" layoutY="49.0" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label></VBox>
                            <ImageView id="search-exit-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                            <ImageView id="search-entry-snapshot-view" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                      </GridPane></AnchorPane>
