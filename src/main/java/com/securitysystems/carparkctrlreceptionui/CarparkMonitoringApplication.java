@@ -143,6 +143,9 @@ public class CarparkMonitoringApplication extends Application {
 		GridPane container = new GridPane();
 		container.setVgap(20);
 
+		loginDialog.setWidth(200);
+		loginDialog.setHeight(85);
+
 		Label headingLabel = new Label("Login to carpark management client");
 		headingLabel.setFont(new Font(20));
 		Label usernameLabel = new Label("Username: ");

@@ -4,7 +4,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -19,6 +21,8 @@ public class CarparkMonitoringController {
 	@FXML
 	protected void handleOpenGateButton() {
 		System.out.println("open gate button clicked");
+		Alert confimation = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to open the gate for...?\n\n");
+		confimation.show();
 	}
 
 	@FXML
