@@ -46,9 +46,10 @@ public class EventElement {
 			// if is not KnownVehicle and entry and exit timestamps are equal (implies never entered), enable open gate button, else disable it.
 			if (!log.KnownVehicle && log.EntryTimestamp.equals(log.ExitTimestamp)) {
 				LabelSetters.MonitoringView.setOpenGateButtonState(applicationScene, false);
-			} else {
+			} else { // timestamps are not equal (vehicle has entered and exited) or vehicle is known which means it automatically entered
 				LabelSetters.MonitoringView.setOpenGateButtonState(applicationScene, true);
 			}
+			CarparkManagementApplication.selectedLog = log;
 
 		} else {
 			LabelSetters.SearchView.setCurrentLogSectionLabels(log, applicationScene);

@@ -20,7 +20,10 @@ public class LoadLatestLogsTask extends TimerTask {
 		EventElement.loadIntoScrollpane(event, true, isLatestEvent, this.applicationScene);
 
 		// set the Last Detection section's labels if this is the most recent event
-		if (isLatestEvent) LabelSetters.MonitoringView.setCurrentLogSectionLabels(event, this.applicationScene, false);
+		if (isLatestEvent) {
+			LabelSetters.MonitoringView.setCurrentLogSectionLabels(event, this.applicationScene, false);
+			CarparkManagementApplication.selectedLog = event;
+		}
 
 	}
 

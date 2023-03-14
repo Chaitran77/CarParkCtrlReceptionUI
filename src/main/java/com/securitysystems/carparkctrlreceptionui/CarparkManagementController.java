@@ -10,24 +10,35 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.util.Optional;
 
-public class CarparkMonitoringController {
+public class CarparkManagementController {
 
 	public static Scene applicationScene;
 	public void setApplicationScene(Scene scene) {
-		CarparkMonitoringController.applicationScene = scene;
+		CarparkManagementController.applicationScene = scene;
 	}
 
 	@FXML
 	protected void handleOpenGateButton() {
 		System.out.println("open gate button clicked");
-		Alert confimation = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to open the gate for...?\n\n");
-		confimation.show();
+		Alert confimation = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to open the gate for " + CarparkManagementApplication.selectedLog.Numberplate + "?\n\n", ButtonType.YES, ButtonType.NO);
+		Optional<ButtonType> buttonPressed = confimation.showAndWait();
+		if (buttonPressed.get() == ButtonType.YES) {
+			try {
+				HttpRequester.postOpenGate(CarparkManagementApplication.selectedLog);
+				// if exception not thrown, opening gate succeeded
+				new Alert(Alert.AlertType.INFORMATION, "The gate has successfully been opened.", ButtonType.FINISH).show();
+			} catch (Exception e) {
+				new Alert(Alert.AlertType.ERROR, "An error occurred when trying to open the gate: " + e.getMessage(), ButtonType.FINISH).show();
+			}
+
+		}
 	}
 
 	@FXML
 	protected void handleSearchButtonClick() {
-		SearchUtils.performSearch(CarparkMonitoringController.applicationScene);
+		SearchUtils.performSearch(CarparkManagementController.applicationScene);
 	}
 
 	@FXML

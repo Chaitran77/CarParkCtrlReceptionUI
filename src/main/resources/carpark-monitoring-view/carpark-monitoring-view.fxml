@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane styleClass="background-pane" stylesheets="@../carpark-monitoring-view/carpark-monitoring-view.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securitysystems.carparkctrlreceptionui.CarparkMonitoringController">
+<BorderPane styleClass="background-pane" stylesheets="@../carpark-monitoring-view/carpark-monitoring-view.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.securitysystems.carparkctrlreceptionui.CarparkManagementController">
    <top>
       <HBox id="titlebar" maxHeight="50.0" prefHeight="50.0" spacing="30.0" styleClass="window-control-buttons-container" BorderPane.alignment="TOP_RIGHT">
-         <Label styleClass="title-label" text="Carpark Monitoring Client" textFill="#f5f2f2">
+         <Label styleClass="title-label" text="Carpark Management Client" textFill="#f5f2f2">
             <font>
                <Font name="Ubuntu" size="20.0" />
             </font>

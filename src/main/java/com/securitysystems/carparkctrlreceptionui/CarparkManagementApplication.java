@@ -16,7 +16,7 @@ import java.util.Optional;
 import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
-public class CarparkMonitoringApplication extends Application {
+public class CarparkManagementApplication extends Application {
 
 //    https://edencoding.com/contemporary-ui-java/
 //    SOURCE: JavaFX CSS Reference Guide @ https://openjfx.io/javadoc/19/javafx.graphics/javafx/scene/doc-files/cssref.html
@@ -30,6 +30,7 @@ public class CarparkMonitoringApplication extends Application {
 	private double yOffset;
 
 	private Timer logRetrieveTimer;
+	public static Log selectedLog;
 	@Override
 	public void start(Stage stage) throws IOException {
 
@@ -88,9 +89,9 @@ public class CarparkMonitoringApplication extends Application {
 		Settings.setNumberEventsToFetchForMonitoring(scene, 10);
 		Settings.setNumberEventsToSearchFrom(scene, 10);
 
-		((CarparkMonitoringController)fxmlLoader.getController()).setApplicationScene(scene);
+		((CarparkManagementController)fxmlLoader.getController()).setApplicationScene(scene);
 
-		stage.setTitle("Carpark Monitoring and Control Client");
+		stage.setTitle("Carpark Management Client");
 		stage.initStyle(StageStyle.UNDECORATED); // remove system's window styling
 		stage.setScene(scene);
 		stage.show();
@@ -104,8 +105,10 @@ public class CarparkMonitoringApplication extends Application {
 		if (loginAttemptsRemaining == 0) {
 			Alert attemptsErrorAlert = new Alert(Alert.AlertType.ERROR, "You have tried to login with incorrect credentials too many times.\nPlease contact your administrator to continue.",  new ButtonType("Okay"));
 			attemptsErrorAlert.showAndWait();
-			return;
+			System.exit(0);
 		}
+
+
 
 		Optional<String[]> result = loginDialog(loginAttemptsRemaining).showAndWait();
 		if (result.isPresent()) {
@@ -143,10 +146,10 @@ public class CarparkMonitoringApplication extends Application {
 		GridPane container = new GridPane();
 		container.setVgap(20);
 
-		loginDialog.setWidth(200);
-		loginDialog.setHeight(85);
+		container.setMinWidth(320);
+		container.setMinHeight(75);
 
-		Label headingLabel = new Label("Login to carpark management client");
+		Label headingLabel = new Label("Login: Carpark Management Client");
 		headingLabel.setFont(new Font(20));
 		Label usernameLabel = new Label("Username: ");
 		Label passwordLabel = new Label("Password: ");
