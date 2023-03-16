@@ -4,6 +4,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -38,6 +41,11 @@ public class SearchUtils {
 			if (logs.length == 0) {
 				// no logs with matching numberplate's were found
 				Alert logsNotFoundAlert = new Alert(Alert.AlertType.INFORMATION, "No events with matching numberplate's could be found.\n\n", new ButtonType("Okay"));
+				Stage stage = (Stage) logsNotFoundAlert.getDialogPane().getScene().getWindow();
+				stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
+				logsNotFoundAlert.setTitle("Carpark Management System search");
+				logsNotFoundAlert.setHeaderText("Search returned no results");
+				logsNotFoundAlert.initStyle(StageStyle.UNIFIED);
 				logsNotFoundAlert.show();
 			}
 
@@ -47,6 +55,8 @@ public class SearchUtils {
 			}
 		} catch (IOException exception) {
 			Alert errorAlert = new Alert(Alert.AlertType.WARNING, "Some or all data could not be updated due to either a network or server error.\n\n" + exception.getMessage(), new ButtonType("Close"));
+			Stage stage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+			stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
 			errorAlert.show();
 			exception.printStackTrace();
 		}

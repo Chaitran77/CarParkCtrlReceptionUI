@@ -4,6 +4,9 @@ import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.TimerTask;
@@ -74,6 +77,13 @@ public class LoadLatestLogsTask extends TimerTask {
 				LabelSetters.MonitoringView.setUILabelsToUnknown(this.applicationScene);
 
 				Alert errorAlert = new Alert(Alert.AlertType.WARNING, "Some or all data could not be updated due to either a network or server error.\n\n" + exception.getMessage(), new ButtonType("Close"));
+				errorAlert.setTitle("Carpark Management System error");
+				errorAlert.setHeaderText("Network or server error");
+				errorAlert.initStyle(StageStyle.UNIFIED);
+//https://stackoverflow.com/questions/66237267/set-icon-for-overall-application-windows-in-javafx
+				Stage stage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+				stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
+
 				errorAlert.show();
 				exception.printStackTrace();
 			}

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -94,6 +95,7 @@ public class CarparkManagementApplication extends Application {
 		stage.setTitle("Carpark Management Client");
 		stage.initStyle(StageStyle.UNDECORATED); // remove system's window styling
 		stage.setScene(scene);
+		stage.getIcons().add(new Image(this.getClass().getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
 		stage.show();
 
 		logRetrieveTimer = new Timer(); // below: Passing scene which elements can be derived from to avoid having many parameters
@@ -104,6 +106,8 @@ public class CarparkManagementApplication extends Application {
 
 		if (loginAttemptsRemaining == 0) {
 			Alert attemptsErrorAlert = new Alert(Alert.AlertType.ERROR, "You have tried to login with incorrect credentials too many times.\nPlease contact your administrator to continue.",  new ButtonType("Okay"));
+			Stage stage = (Stage) attemptsErrorAlert.getDialogPane().getScene().getWindow();
+			stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
 			attemptsErrorAlert.showAndWait();
 			System.exit(0);
 		}
@@ -128,6 +132,8 @@ public class CarparkManagementApplication extends Application {
 				} catch (Exception exception) {
 					// incorrect creds
 					Alert errorAlert = new Alert(Alert.AlertType.WARNING, "Incorrect username and/or password.\n\n" + exception.getMessage(), new ButtonType("Try again"));
+					Stage stage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+					stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
 					errorAlert.showAndWait();
 					loginSequence(loginAttemptsRemaining-1);
 				}
@@ -135,6 +141,8 @@ public class CarparkManagementApplication extends Application {
 			} catch (IOException exception) {
 				// unable to connect to server
 				Alert IOErrorAlert = new Alert(Alert.AlertType.WARNING, "Unable to login due to either a network or server error.\n\n" + exception.getMessage(), new ButtonType("Close"));
+				Stage stage = (Stage) IOErrorAlert.getDialogPane().getScene().getWindow();
+				stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
 				IOErrorAlert.showAndWait();
 				loginSequence(loginAttemptsRemaining);
 			}
@@ -173,8 +181,12 @@ public class CarparkManagementApplication extends Application {
 		loginDialog.setResultConverter((dialogButton) -> { // since the confirm button is the only available button, no need to check which button was pressed
 			return new String[]{usernameInput.getText(), passwordInput.getText()};
 		});
+		loginDialog.setTitle("Carpark Management Client login");
 
 		loginDialog.getDialogPane().setContent(container);
+		Stage stage = (Stage) loginDialog.getDialogPane().getScene().getWindow();
+		stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
+
 		return loginDialog;
 	}
 
