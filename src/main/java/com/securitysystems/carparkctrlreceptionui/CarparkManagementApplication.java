@@ -131,9 +131,14 @@ public class CarparkManagementApplication extends Application {
 					HttpRequester.login(username, hashedPassword);
 				} catch (Exception exception) {
 					// incorrect creds
-					Alert errorAlert = new Alert(Alert.AlertType.WARNING, "Incorrect username and/or password.\n\n" + exception.getMessage(), new ButtonType("Try again"));
+					Alert errorAlert = new Alert(Alert.AlertType.ERROR, "The username and password combination entered is incorrect. Please try again.\n\n" + exception.getMessage(), new ButtonType("Try again"));
+					errorAlert.setTitle("Carpark Management System login error");
+					errorAlert.setHeaderText("Incorrect username and/or password.");
+					errorAlert.initStyle(StageStyle.DECORATED);
+
 					Stage stage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
 					stage.getIcons().add(new Image(CarparkManagementApplication.class.getResource("/carpark-monitoring-view/images/application-icon.png").toString()));
+
 					errorAlert.showAndWait();
 					loginSequence(loginAttemptsRemaining-1);
 				}
